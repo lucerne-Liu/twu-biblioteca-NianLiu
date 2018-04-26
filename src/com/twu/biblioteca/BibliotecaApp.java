@@ -1,8 +1,13 @@
 package com.twu.biblioteca;
 
 public class BibliotecaApp {
+    private InputReader reader;
 
-    public void start() {
+    public BibliotecaApp(InputReader reader) {
+        this.reader = reader;
+    }
+
+    public void init() {
         printWelcomeMessage();
         printMainMenu();
     }
@@ -13,5 +18,18 @@ public class BibliotecaApp {
 
     public void printMainMenu() {
         System.out.print("1. List Books\n2. Quit\nPlease enter your choice(1～2):");
+    }
+
+    public boolean proceedMainMenu() {
+        printMainMenu();
+        switch (Integer.parseInt(reader.read())){
+            case 1:
+                return true;
+            case 2:
+                return true;
+            default:
+                System.out.print("Select a valid option! Please select again.\n");
+                return false;
+        }
     }
 }

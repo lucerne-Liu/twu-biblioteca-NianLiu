@@ -18,10 +18,10 @@ public class BibliotecaAppTest {
 
     @Before
     public void setUp() {
-        bibliotecaApp = new BibliotecaApp();
+        reader = mock(InputReader.class);
+        bibliotecaApp = new BibliotecaApp(reader);
         outputContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputContent));
-        reader = mock(InputReader.class);
     }
 
     @Test
@@ -38,11 +38,10 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void should_prompt_wrong_message_and_print_main_menu_when_input_invalid(){
+    public void should_return_false_and_prompt_message_when_input_invalid(){
         when(reader.read()).thenReturn("3");
-        bibliotecaApp.proceedMainMenu();
-        assertTrue(systemOut().endsWith("Select a valid option! Please select again.\n"+
-                "1. List Books\n2. Quit\nPlease enter your choice(1～2):"));
+        assertFalse(bibliotecaApp.proceedMainMenu());
+        assertTrue(systemOut().endsWith("Select a valid option! Please select again.\n"));
     }
 
     private String systemOut(){
