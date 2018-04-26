@@ -4,6 +4,7 @@ public class BibliotecaApp {
 
     public void start() {
         printWelcomeMessage();
+        printMainMenu();
     }
 
     public void printWelcomeMessage() {
