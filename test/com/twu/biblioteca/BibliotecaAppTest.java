@@ -102,6 +102,7 @@ public class BibliotecaAppTest {
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
+        verify(reader, times(2)).readOption();
     }
 
     @Test
@@ -110,6 +111,7 @@ public class BibliotecaAppTest {
         when(reader.readName()).thenReturn("HeadFirstJava");
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
+        verify(reader, times(2)).readOption();
     }
 
     @Test
@@ -123,7 +125,8 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_show_returned_book_in_list_when_returned() {
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
+        bibliotecaApp.checkOutBook();
         bibliotecaApp.returnBook();
         bibliotecaApp.printBooksList();
         assertThat(systemOut()).contains(
@@ -134,6 +137,15 @@ public class BibliotecaAppTest {
                         "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
                         "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
+        verify(reader, times(2)).readName();
+    }
+
+    @Test
+    public void should_print_successful_return_message_when_book_in_the_library(){
+       when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
+        bibliotecaApp.checkOutBook();
+        bibliotecaApp.returnBook();
+        assertThat(systemOut().endsWith("Thank you for returning the book.")).isTrue();
     }
 
     private String systemOut() {
