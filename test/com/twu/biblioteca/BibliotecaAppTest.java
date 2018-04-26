@@ -66,9 +66,9 @@ public class BibliotecaAppTest {
     public void should_print_book_list(){
         bibliotecaApp.printBooksList();
         assertThat(systemOut()).isEqualTo("Book List\n"
-                + "Author |Year Published\n" +
+                + "Name|Author|Year Published\n" +
                 "========================\n" +
-                "Head First Java|2003\n" +
+                "Head First Java|Kent Belt|2003\n" +
                 "========================\n");
     }
 
