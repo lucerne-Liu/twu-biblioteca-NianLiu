@@ -27,11 +27,14 @@ public class BibliotecaApp {
                 return true;
         }
     }
-
+    public void printGoodbyeMessage() {
+        System.out.print("Goodbye! See you next time!\n");
+    }
     public void init() {
         printWelcomeMessage();
         while (proceedMainMenu()) {
 
         }
+        printGoodbyeMessage();
     }
 }

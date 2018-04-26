@@ -44,10 +44,19 @@ public class BibliotecaAppTest {
     }
 
     @Test
+    public void should_return_false_and_stop_app_when_choose_Quit(){
+        when(reader.read()).thenReturn("2");
+        assertFalse(bibliotecaApp.proceedMainMenu());
+        bibliotecaApp.init();
+        assertThat(systemOut().endsWith("Goodbye! See you next time!\n")).isTrue();
+    }
+
+    @Test
     public void should_print_main_menu_again_when_input_invalid(){
         when(reader.read()).thenReturn("3").thenReturn("2");
         bibliotecaApp.init();
-        assertTrue(systemOut().endsWith("1. List Books\n2. Quit\nPlease enter your choice(1～2):\n"));
+        assertTrue(systemOut().contains("1. List Books\n2. Quit\nPlease enter your choice(1～2):\n"));
+        verify(reader,times(2)).read();
     }
 
     private String systemOut(){
