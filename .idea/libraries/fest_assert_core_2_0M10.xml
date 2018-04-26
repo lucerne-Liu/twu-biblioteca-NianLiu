@@ -1,7 +1,6 @@
 <component name="libraryTable">
-  <library name="junit-4.11">
+  <library name="fest-assert-core-2.0M10">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/junit-4.11.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/fest-assert-core-2.0M10.jar!/" />
     </CLASSES>
     <JAVADOC />
