@@ -9,7 +9,6 @@ public class InputReader {
 
     public InputReader() {
         scanner = new Scanner(System.in);
-        scanner.useDelimiter("\n");
     }
 
     public String readOption() {
@@ -19,6 +18,8 @@ public class InputReader {
     }
 
     public String readName() {
-        return scanner.next().trim();
+        scanner.useDelimiter("\n");
+        String inputString = scanner.next().trim();
+        return inputString;
     }
 }

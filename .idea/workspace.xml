@@ -4,7 +4,6 @@
     <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,26 +18,12 @@
       <file leaf-file-name="InputReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            <state relative-caret-position="182">
+              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#551#552#0" expanded="true" />
-                <element signature="e#595#596#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BibliotecaAppTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="20" column="65" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#10570#10571#0" expanded="true" />
-                <element signature="e#10617#10618#0" expanded="true" />
+                <element signature="e#207#208#0" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,8 +32,8 @@
       <file leaf-file-name="InputReaderTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="46" column="44" lean-forward="true" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+            <state relative-caret-position="226">
+              <caret line="47" column="67" lean-forward="true" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#335#336#0" expanded="true" />
@@ -61,7 +46,7 @@
       <file leaf-file-name="CommandReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/main/java/com/tw/CommandReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="254">
               <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="54" />
               <folding />
             </state>
@@ -110,8 +95,8 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
       </list>
     </option>
   </component>
@@ -122,8 +107,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="181" />
-    <option name="y" value="264" />
+    <option name="x" value="183" />
+    <option name="y" value="167" />
     <option name="width" value="1529" />
     <option name="height" value="901" />
   </component>
@@ -218,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InputReaderTest.should_return_book_name_when_input">
+  <component name="RunManager" selected="JUnit.InputReaderTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -434,10 +419,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_book_name_when_input" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_invalid_when_input_option_non_digit" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_input_option_when_has_spaces" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.InputReaderTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.InputReaderTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_book_name_when_input" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_invalid_when_input_option_non_digit" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_input_option_when_has_spaces" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_invalid_when_inpu_option_non_digit" />
       </list>
     </recent_temporary>
@@ -456,7 +441,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524739171739</updated>
       <workItem from="1524739173105" duration="10697000" />
-      <workItem from="1524751337066" duration="15633000" />
+      <workItem from="1524751337066" duration="15787000" />
     </task>
     <task id="LOCAL-00001" summary="test:add test &quot;should_print_welcome_message_when_start_app&quot;">
       <created>1524741679516</created>
@@ -675,27 +660,34 @@
       <option name="project" value="LOCAL" />
       <updated>1524769008712</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="test:add test &quot;should_return_book_name_when_input&quot;">
+      <created>1524769283457</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1524769283458</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InputReaderTest - 2018.04.27 at 02h 56m 32s.xml">
+    <history-entry file="InputReaderTest - 2018.04.27 at 03h 03m 46s.xml">
       <configuration name="InputReaderTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="InputReaderTest_should_return_book_name_when_input - 2018.04.27 at 03h 01m 00s.xml">
       <configuration name="InputReaderTest.should_return_book_name_when_input" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputReaderTest_should_return_input_option_when_has_spaces - 2018.04.27 at 02h 58m 06s.xml">
-      <configuration name="InputReaderTest.should_return_input_option_when_has_spaces" configurationId="JUnit" />
+    <history-entry file="InputReaderTest_should_return_book_name_when_input - 2018.04.27 at 03h 02m 25s.xml">
+      <configuration name="InputReaderTest.should_return_book_name_when_input" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputReaderTest_should_return_invalid_when_inpu_option_non_digit - 2018.04.27 at 02h 53m 42s.xml">
-      <configuration name="InputReaderTest.should_return_invalid_when_inpu_option_non_digit" configurationId="JUnit" />
+    <history-entry file="InputReaderTest_should_return_book_name_when_input - 2018.04.27 at 03h 02m 42s.xml">
+      <configuration name="InputReaderTest.should_return_book_name_when_input" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputReaderTest_should_return_invalid_when_inpu_option_non_digit - 2018.04.27 at 02h 56m 27s.xml">
-      <configuration name="InputReaderTest.should_return_invalid_when_inpu_option_non_digit" configurationId="JUnit" />
+    <history-entry file="InputReaderTest_should_return_book_name_when_input - 2018.04.27 at 03h 03m 02s.xml">
+      <configuration name="InputReaderTest.should_return_book_name_when_input" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputReaderTest_should_return_invalid_when_input_option_non_digit - 2018.04.27 at 02h 58m 13s.xml">
-      <configuration name="InputReaderTest.should_return_invalid_when_input_option_non_digit" configurationId="JUnit" />
+    <history-entry file="InputReaderTest_should_return_book_name_when_input - 2018.04.27 at 03h 03m 39s.xml">
+      <configuration name="InputReaderTest.should_return_book_name_when_input" configurationId="JUnit" />
     </history-entry>
     <history-entry file="InputReaderTest_should_return_invalid_when_input_option_non_digit - 2018.04.27 at 02h 58m 28s.xml">
       <configuration name="InputReaderTest.should_return_invalid_when_input_option_non_digit" configurationId="JUnit" />
@@ -711,15 +703,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26330000" />
+    <option name="totallyTimeSpent" value="26484000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="181" y="264" width="1529" height="901" extended-state="0" />
+    <frame x="183" y="167" width="1529" height="901" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32739726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -784,7 +776,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test:add test &quot;should_print_main_menu_again_when_input_invalid&quot;" />
     <MESSAGE value="feat:implement test &quot;should_print_main_menu_again_when_input_invalid&quot;" />
     <MESSAGE value="refactor:refactor the test" />
     <MESSAGE value="test:add test &quot;should_return_false_and_stop_app_when_choose_Quit&quot;" />
@@ -809,7 +800,8 @@
     <MESSAGE value="feat:implement test &quot;should_return_input_option_when_is_right&quot;" />
     <MESSAGE value="test:add test &quot;should_return_invalid_when_inpu_option_non_digit&quot;" />
     <MESSAGE value="feat:implement test &quot;should_return_invalid_when_inpu_option_non_digit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:implement test &quot;should_return_invalid_when_inpu_option_non_digit&quot;" />
+    <MESSAGE value="test:add test &quot;should_return_book_name_when_input&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_return_book_name_when_input&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -847,8 +839,8 @@
           <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#207#208#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1059,14 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/main/java/com/tw/CommandReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/test/java/com/tw/CommandReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-345">
@@ -1075,15 +1059,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java">
+    <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/main/java/com/tw/CommandReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="254">
+          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,10 +1079,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#207#208#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="46" column="44" lean-forward="true" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+        <state relative-caret-position="226">
+          <caret line="47" column="67" lean-forward="true" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#335#336#0" expanded="true" />
