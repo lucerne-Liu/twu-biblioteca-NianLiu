@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,26 +15,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CommandReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/main/java/com/tw/CommandReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="InputReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+            <state relative-caret-position="203">
+              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding>
-                <element signature="e#87#88#0" expanded="true" />
-                <element signature="e#114#115#0" expanded="true" />
-                <element signature="e#146#147#0" expanded="true" />
-                <element signature="e#173#174#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#293#294#0" expanded="true" />
+                <element signature="e#330#331#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#389#390#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,13 +34,23 @@
       <file leaf-file-name="InputReaderTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+            <state relative-caret-position="260">
+              <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#335#336#0" expanded="true" />
                 <element signature="e#377#378#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/main/java/com/tw/CommandReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,12 +93,12 @@
       <list>
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/ExampleTest.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
       </list>
     </option>
   </component>
@@ -437,7 +438,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524739171739</updated>
       <workItem from="1524739173105" duration="10697000" />
-      <workItem from="1524751337066" duration="14380000" />
+      <workItem from="1524751337066" duration="14519000" />
     </task>
     <task id="LOCAL-00001" summary="test:add test &quot;should_print_welcome_message_when_start_app&quot;">
       <created>1524741679516</created>
@@ -628,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524766279518</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="test:add test &quot;should_return_input_option_when_is_right&quot;">
+      <created>1524768026317</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1524768026317</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -656,15 +664,15 @@
     <history-entry file="BibliotecaAppTest_should_print_unsuccessful_return_message_when_book_name_wrong - 2018.04.27 at 02h 10m 49s.xml">
       <configuration name="BibliotecaAppTest.should_print_unsuccessful_return_message_when_book_name_wrong" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces - 2018.04.27 at 02h 01m 56s.xml">
-      <configuration name="BibliotecaAppTest.should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="InputReaderTest_should_return_input_option_when_is_right - 2018.04.27 at 02h 40m 09s.xml">
+      <configuration name="InputReaderTest.should_return_input_option_when_is_right" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InputReaderTest_should_return_input_option_when_is_right - 2018.04.27 at 02h 42m 30s.xml">
       <configuration name="InputReaderTest.should_return_input_option_when_is_right" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25077000" />
+    <option name="totallyTimeSpent" value="25216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="181" y="105" width="1529" height="901" extended-state="0" />
@@ -737,7 +745,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test:add test &quot;should_print_main_menu_after_welcome_message&quot;" />
     <MESSAGE value="feat:implement test &quot;should_print_main_menu_after_welcome_message&quot;" />
     <MESSAGE value="test:add test &quot;should_prompt_wrong_message_and_print_main_menu_when_input_invalid&quot;" />
     <MESSAGE value="feat:implement test &quot;should_return_false_and_prompt_message_when_input_invalid&quot;" />
@@ -762,7 +769,8 @@
     <MESSAGE value="test:add test &quot;should_print_successful_return_message_when_book_name_correct_but_no_spaces&quot;" />
     <MESSAGE value="test:add test &quot;should_print_unsuccessful_return_message_when_book_name_wrong&quot;" />
     <MESSAGE value="feat:implement test &quot;should_print_unsuccessful_return_message_when_book_name_wrong&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:implement test &quot;should_print_unsuccessful_return_message_when_book_name_wrong&quot;" />
+    <MESSAGE value="test:add test &quot;should_return_input_option_when_is_right&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_return_input_option_when_is_right&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -799,10 +807,11 @@
         <state relative-caret-position="92">
           <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="20" />
           <folding>
-            <element signature="e#87#88#0" expanded="true" />
-            <element signature="e#114#115#0" expanded="true" />
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1013,27 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding>
-            <element signature="e#87#88#0" expanded="true" />
-            <element signature="e#114#115#0" expanded="true" />
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/test/java/com/tw/CommandReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -1046,18 +1034,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/test/java/com/tw/CommandReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/main/java/com/tw/CommandReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        <state relative-caret-position="115">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="260">
+          <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#335#336#0" expanded="true" />
