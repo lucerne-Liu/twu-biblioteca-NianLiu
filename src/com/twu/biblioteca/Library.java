@@ -1,6 +1,5 @@
 package com.twu.biblioteca;
 
-import org.fest.assertions.internal.Booleans;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +24,13 @@ public class Library {
         bookList.forEach(item -> System.out.print(item.toString()));
     }
 
+    public String removeSpacesInName(String name) {
+        return name.replaceAll(" ", "");
+    }
+
     public boolean checkOutBook(String name) {
-        Boolean hasThisBook = bookList.stream().map(Book::getName).anyMatch(item -> item == name);
-        bookList.removeIf(item -> item.getName() == name);
+        Boolean hasThisBook = bookList.stream().map(Book::getName).map(this::removeSpacesInName).anyMatch(item -> item.equals(removeSpacesInName(name)));
+        bookList.removeIf(item -> removeSpacesInName(item.getName()).equals(removeSpacesInName(name)));
         return hasThisBook;
     }
 
