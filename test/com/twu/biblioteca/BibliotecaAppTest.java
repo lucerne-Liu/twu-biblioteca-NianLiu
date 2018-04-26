@@ -12,6 +12,11 @@ import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
+    public static final String QUIT_OPTION = "3";
+    public static final String INVALID_OPTION = "4";
+    public static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Quit\nPlease enter your choice(1～3):\n";
+    public static final String BOOK_LIST_OPTION = "1";
+    public static final String CHECK_OUT_OPTION = "2";
     private BibliotecaApp bibliotecaApp;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -33,19 +38,19 @@ public class BibliotecaAppTest {
     @Test
     public void should_print_main_menu_after_welcome_message(){
         bibliotecaApp.printMainMenu();
-        assertThat(systemOut().endsWith("1. List Books\n2. Quit\nPlease enter your choice(1～2):\n")).isTrue();
+        assertThat(systemOut().endsWith(MAIN_MENU)).isTrue();
     }
 
     @Test
     public void should_return_true_and_prompt_message_when_input_invalid(){
-        when(reader.read()).thenReturn("3");
+        when(reader.read()).thenReturn(INVALID_OPTION);
         assertTrue(bibliotecaApp.proceedMainMenu());
         assertThat(systemOut().endsWith("Select a valid option! Please select again.\n")).isTrue();
     }
 
     @Test
     public void should_return_false_and_stop_app_when_choose_Quit(){
-        when(reader.read()).thenReturn("2");
+        when(reader.read()).thenReturn(QUIT_OPTION);
         assertFalse(bibliotecaApp.proceedMainMenu());
         bibliotecaApp.init();
         assertThat(systemOut().endsWith("Goodbye! See you next time!\n")).isTrue();
@@ -53,16 +58,17 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_print_main_menu_again_when_input_invalid(){
-        when(reader.read()).thenReturn("3").thenReturn("2");
+        when(reader.read()).thenReturn(INVALID_OPTION).thenReturn(QUIT_OPTION);
         bibliotecaApp.init();
-        assertTrue(systemOut().contains("1. List Books\n2. Quit\nPlease enter your choice(1～2):\n"));
+        assertTrue(systemOut().contains(MAIN_MENU));
         verify(reader,times(2)).read();
     }
 
     @Test
-    public void should_print_book_list(){
-        bibliotecaApp.printBooksList();
-        assertThat(systemOut()).isEqualTo(
+    public void should_print_book_list_when_choose_List_Books(){
+        when(reader.read()).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
+        assertThat(systemOut()).contains(
                 "Name                                              Author                                            Year Published                                    \n" +
                 "===================================================================================================================\n" +
                 "Head First Java                                   Kent Belt                                         2003                                              \n" +
@@ -70,6 +76,21 @@ public class BibliotecaAppTest {
                 "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                 "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
                 "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
+        verify(reader,times(2)).read();
+    }
+    
+    @Test
+    public void should_not_show_checked_out_books_after_check_out(){
+        bibliotecaApp.checkOutBook("Head First Java");
+        bibliotecaApp.printBooksList();
+        assertThat(systemOut()).contains(
+                "Name                                              Author                                            Year Published                                    \n" +
+                        "===================================================================================================================\n" +
+                        "Test-Driven Development                           Kent Belt                                         2004                                              \n" +
+                        "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
+                        "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
+                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
+        verify(reader,times(2)).read();
     }
 
     private String systemOut(){
