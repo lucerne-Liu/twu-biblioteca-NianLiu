@@ -66,6 +66,8 @@ public class BibliotecaApp {
     }
 
     public void returnBook() {
-        library.returnBook(reader.readName());
+        if (library.returnBook(reader.readName())) {
+            System.out.print("Thank you for returning the book.\n");
+        }
     }
 }

@@ -145,7 +145,7 @@ public class BibliotecaAppTest {
        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.checkOutBook();
         bibliotecaApp.returnBook();
-        assertThat(systemOut().endsWith("Thank you for returning the book.")).isTrue();
+        assertThat(systemOut().endsWith("Thank you for returning the book.\n")).isTrue();
     }
 
     private String systemOut() {
