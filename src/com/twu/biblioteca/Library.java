@@ -34,4 +34,8 @@ public class Library {
         return hasThisBook;
     }
 
+    public boolean returnBook(String name, String author, int publishedYear) {
+        bookList.add(new Book(name, author, publishedYear));
+        return true;
+    }
 }

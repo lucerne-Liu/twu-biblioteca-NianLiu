@@ -64,4 +64,8 @@ public class BibliotecaApp {
 
 
     }
+
+    public void returnBook() {
+        library.returnBook("Head First Java", "Kent Belt",2003);
+    }
 }
