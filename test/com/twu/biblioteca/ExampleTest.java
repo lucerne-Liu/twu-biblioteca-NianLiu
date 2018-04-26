@@ -7,9 +7,8 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import  static org.fest.assertions.api.Assertions.assertThat;
+import static org.junit.Assert.*;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 public class ExampleTest {
     private BibliotecaApp bibliotecaApp;
@@ -25,7 +24,7 @@ public class ExampleTest {
     @Test
     public void should_print_welcome_message_when_start_app(){
         bibliotecaApp.start();
-        assertThat(systemOut().startsWith("Welcome to use the Biblioteca!")).isTrue();
+        assertTrue(systemOut().startsWith("Welcome to use the Biblioteca!"));
     }
 
     private String systemOut(){
