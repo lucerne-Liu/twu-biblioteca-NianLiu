@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,14 +18,12 @@
       <file leaf-file-name="InputReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="180">
+              <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#293#294#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#569#570#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -34,7 +32,7 @@
       <file leaf-file-name="InputReaderTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="272">
               <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -48,8 +46,8 @@
       <file leaf-file-name="CommandReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/main/java/com/tw/CommandReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="67" />
+            <state relative-caret-position="184">
+              <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -96,9 +94,9 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
       </list>
     </option>
   </component>
@@ -109,8 +107,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="161" />
-    <option name="y" value="284" />
+    <option name="x" value="158" />
+    <option name="y" value="149" />
     <option name="width" value="1529" />
     <option name="height" value="901" />
   </component>
@@ -205,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InputReaderTest.should_return_invalid_when_inpu_option_non_digit">
+  <component name="RunManager" selected="JUnit.InputReaderTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -247,31 +245,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="biblioteca" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="should_print_successful_return_message_when_book_name_correct_but_no_spaces" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="BibliotecaAppTest.should_print_unsuccessful_return_message_when_book_name_wrong" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -286,6 +259,31 @@
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
       <option name="METHOD_NAME" value="should_print_unsuccessful_return_message_when_book_name_wrong" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="InputReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="biblioteca" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.InputReaderTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -409,18 +407,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_unsuccessful_return_message_when_book_name_wrong" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_input_option_when_is_right" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_invalid_when_inpu_option_non_digit" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_unsuccessful_return_message_when_book_name_wrong" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_input_option_when_is_right" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_invalid_when_inpu_option_non_digit" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.InputReaderTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_invalid_when_inpu_option_non_digit" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_input_option_when_is_right" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_unsuccessful_return_message_when_book_name_wrong" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.InputReaderTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_invalid_when_inpu_option_non_digit" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InputReaderTest.should_return_input_option_when_is_right" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_unsuccessful_return_message_when_book_name_wrong" />
       </list>
     </recent_temporary>
   </component>
@@ -438,7 +436,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524739171739</updated>
       <workItem from="1524739173105" duration="10697000" />
-      <workItem from="1524751337066" duration="15184000" />
+      <workItem from="1524751337066" duration="15356000" />
     </task>
     <task id="LOCAL-00001" summary="test:add test &quot;should_print_welcome_message_when_start_app&quot;">
       <created>1524741679516</created>
@@ -643,24 +641,22 @@
       <option name="project" value="LOCAL" />
       <updated>1524768162764</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="test:add test &quot;should_return_invalid_when_inpu_option_non_digit&quot;">
+      <created>1524768831386</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1524768831386</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_biblioteca - 2018.04.27 at 02h 05m 59s.xml">
-      <configuration name="All in biblioteca" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_biblioteca - 2018.04.27 at 02h 11m 07s.xml">
       <configuration name="All in biblioteca" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_biblioteca - 2018.04.27 at 02h 49m 26s.xml">
       <configuration name="All in biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_name_correct_but_no_spaces - 2018.04.27 at 02h 03m 45s.xml">
-      <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_name_correct_but_no_spaces - 2018.04.27 at 02h 05m 30s.xml">
-      <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_name_correct_but_no_spaces - 2018.04.27 at 02h 08m 01s.xml">
       <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" configurationId="JUnit" />
@@ -671,18 +667,27 @@
     <history-entry file="BibliotecaAppTest_should_print_unsuccessful_return_message_when_book_name_wrong - 2018.04.27 at 02h 10m 49s.xml">
       <configuration name="BibliotecaAppTest.should_print_unsuccessful_return_message_when_book_name_wrong" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="InputReaderTest - 2018.04.27 at 02h 56m 32s.xml">
+      <configuration name="InputReaderTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="InputReaderTest_should_return_input_option_when_is_right - 2018.04.27 at 02h 40m 09s.xml">
       <configuration name="InputReaderTest.should_return_input_option_when_is_right" configurationId="JUnit" />
     </history-entry>
     <history-entry file="InputReaderTest_should_return_input_option_when_is_right - 2018.04.27 at 02h 42m 30s.xml">
       <configuration name="InputReaderTest.should_return_input_option_when_is_right" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="InputReaderTest_should_return_invalid_when_inpu_option_non_digit - 2018.04.27 at 02h 53m 42s.xml">
+      <configuration name="InputReaderTest.should_return_invalid_when_inpu_option_non_digit" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InputReaderTest_should_return_invalid_when_inpu_option_non_digit - 2018.04.27 at 02h 56m 27s.xml">
+      <configuration name="InputReaderTest.should_return_invalid_when_inpu_option_non_digit" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25881000" />
+    <option name="totallyTimeSpent" value="26053000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="161" y="284" width="1529" height="901" extended-state="0" />
+    <frame x="158" y="149" width="1529" height="901" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -752,7 +757,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test:add test &quot;should_prompt_wrong_message_and_print_main_menu_when_input_invalid&quot;" />
     <MESSAGE value="feat:implement test &quot;should_return_false_and_prompt_message_when_input_invalid&quot;" />
     <MESSAGE value="test:add test &quot;should_print_main_menu_again_when_input_invalid&quot;" />
     <MESSAGE value="feat:implement test &quot;should_print_main_menu_again_when_input_invalid&quot;" />
@@ -777,7 +781,8 @@
     <MESSAGE value="feat:implement test &quot;should_print_unsuccessful_return_message_when_book_name_wrong&quot;" />
     <MESSAGE value="test:add test &quot;should_return_input_option_when_is_right&quot;" />
     <MESSAGE value="feat:implement test &quot;should_return_input_option_when_is_right&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:implement test &quot;should_return_input_option_when_is_right&quot;" />
+    <MESSAGE value="test:add test &quot;should_return_invalid_when_inpu_option_non_digit&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_return_invalid_when_inpu_option_non_digit&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -815,10 +820,8 @@
           <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1049,31 +1052,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java">
+    <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/main/java/com/tw/CommandReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/main/java/com/tw/CommandReader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="67" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/InputReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="272">
           <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
