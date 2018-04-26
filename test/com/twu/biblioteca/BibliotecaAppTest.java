@@ -91,6 +91,14 @@ public class BibliotecaAppTest {
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
                         "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
     }
+    
+    @Test
+    public void should_prompt_successful_msg_when_checked_out(){
+        when(reader.read()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readName()).thenReturn("Head First Java");
+        bibliotecaApp.init();
+        assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
+    }
 
     private String systemOut(){
         return outputContent.toString();
