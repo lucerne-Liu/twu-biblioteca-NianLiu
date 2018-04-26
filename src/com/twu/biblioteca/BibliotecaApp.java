@@ -48,4 +48,8 @@ public class BibliotecaApp {
         }
         printGoodbyeMessage();
     }
+
+    public void checkOutBook(String name) {
+        library.checkOutBook(name);
+    }
 }

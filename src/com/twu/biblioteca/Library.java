@@ -23,4 +23,7 @@ public class Library {
         bookList.forEach(item -> System.out.print(item.toString()));
     }
 
+    public void checkOutBook(String name) {
+        bookList.removeIf(item -> item.getName() == name);
+    }
 }

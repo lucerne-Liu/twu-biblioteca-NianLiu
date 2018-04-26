@@ -90,7 +90,6 @@ public class BibliotecaAppTest {
                         "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
                         "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
-        verify(reader,times(2)).read();
     }
 
     private String systemOut(){
