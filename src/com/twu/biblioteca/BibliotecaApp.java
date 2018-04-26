@@ -27,6 +27,9 @@ public class BibliotecaApp {
                 checkOutBook();
                 return true;
             case 3:
+                returnBook();
+                return true;
+            case 4:
                 return false;
             default:
                 System.out.print("Select a valid option! Please select again.\n");

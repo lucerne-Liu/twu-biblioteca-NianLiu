@@ -14,8 +14,8 @@ import static org.mockito.Mockito.*;
 public class BibliotecaAppTest {
     public static final String BOOK_LIST_OPTION = "1";
     public static final String CHECK_OUT_OPTION = "2";
-    public static final String QUIT_OPTION = "3";
-    public static final String RETURN_BOOK_OPTION = "4";
+    public static final String RETURN_BOOK_OPTION = "3";
+    public static final String QUIT_OPTION = "4";
     public static final String INVALID_OPTION = "5";
     public static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Return Book\n4. Quit\nPlease enter your choice(1～4):\n";
     public static final String EXIST_BOOK_NAME = "Head First Java";
@@ -153,6 +153,24 @@ public class BibliotecaAppTest {
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you for returning the book.\n")).isTrue();
+        verify(reader, times(2)).readOption();
+    }
+
+    @Test
+    public void should_print_unsuccessful_return_message_when_book_name_wrong(){
+        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(ABSENT_BOOK_NAME);
+        bibliotecaApp.checkOutBook();
+        bibliotecaApp.returnBook();
+        assertThat(systemOut().endsWith("That is not a valid book to return.\n")).isTrue();
+        bibliotecaApp.printBooksList();
+        assertThat(systemOut()).contains(
+                "Name                                              Author                                            Year Published                                    \n" +
+                        "===================================================================================================================\n" +
+                        "Test-Driven Development                           Kent Belt                                         2004                                              \n" +
+                        "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
+                        "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
+                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
+
     }
 
 
