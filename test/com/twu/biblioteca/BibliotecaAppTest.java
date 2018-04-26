@@ -104,6 +104,14 @@ public class BibliotecaAppTest {
     }
 
     @Test
+    public void should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces(){
+        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readName()).thenReturn("HeadFirstJava");
+        bibliotecaApp.init();
+        assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
+    }
+
+    @Test
     public void should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list(){
         when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(ABSENT_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
@@ -111,6 +119,7 @@ public class BibliotecaAppTest {
         assertThat(systemOut().contains("That book is not available.\n"
                 + "Please input the book name you want to check out:")).isTrue();
     }
+
 
     private String systemOut(){
         return outputContent.toString();
