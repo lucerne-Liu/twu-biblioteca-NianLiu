@@ -43,14 +43,14 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_return_true_and_prompt_message_when_input_invalid(){
-        when(reader.read()).thenReturn(INVALID_OPTION);
+        when(reader.readOption()).thenReturn(INVALID_OPTION);
         assertTrue(bibliotecaApp.proceedMainMenu());
         assertThat(systemOut().endsWith("Select a valid option! Please select again.\n")).isTrue();
     }
 
     @Test
     public void should_return_false_and_stop_app_when_choose_Quit(){
-        when(reader.read()).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(QUIT_OPTION);
         assertFalse(bibliotecaApp.proceedMainMenu());
         bibliotecaApp.init();
         assertThat(systemOut().endsWith("Goodbye! See you next time!\n")).isTrue();
@@ -58,15 +58,15 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_print_main_menu_again_when_input_invalid(){
-        when(reader.read()).thenReturn(INVALID_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(INVALID_OPTION).thenReturn(QUIT_OPTION);
         bibliotecaApp.init();
         assertTrue(systemOut().contains(MAIN_MENU));
-        verify(reader,times(2)).read();
+        verify(reader,times(2)).readOption();
     }
 
     @Test
     public void should_print_book_list_when_choose_List_Books(){
-        when(reader.read()).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
         bibliotecaApp.init();
         assertThat(systemOut()).contains(
                 "Name                                              Author                                            Year Published                                    \n" +
@@ -76,7 +76,7 @@ public class BibliotecaAppTest {
                 "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                 "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
                 "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
-        verify(reader,times(2)).read();
+        verify(reader,times(2)).readOption();
     }
     
     @Test
@@ -94,10 +94,19 @@ public class BibliotecaAppTest {
     
     @Test
     public void should_prompt_successful_msg_when_checked_out(){
-        when(reader.read()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn("Head First Java");
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
+    }
+
+    @Test
+    public void should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list(){
+        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readName()).thenReturn("Head First Python");
+        bibliotecaApp.init();
+        assertThat(systemOut().contains("That book is not available.\n"
+                + "Please input the book name you want to check out:")).isTrue();
     }
 
     private String systemOut(){

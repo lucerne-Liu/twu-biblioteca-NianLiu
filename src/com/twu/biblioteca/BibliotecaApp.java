@@ -19,11 +19,12 @@ public class BibliotecaApp {
 
     public boolean proceedMainMenu() {
         printMainMenu();
-        switch (Integer.parseInt(reader.read())) {
+        switch (Integer.parseInt(reader.readOption())) {
             case 1:
                 printBooksList();
                 return true;
             case 2:
+                checkOutBook(reader.readName());
                 return true;
             case 3:
                 return false;
@@ -50,6 +51,8 @@ public class BibliotecaApp {
     }
 
     public void checkOutBook(String name) {
+        System.out.println("Please input the book name you want to check out:");
         library.checkOutBook(name);
+        System.out.println("Thank you! Enjoy the book");
     }
 }

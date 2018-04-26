@@ -1,7 +1,11 @@
 package com.twu.biblioteca;
 
 public class InputReader {
-    public String read() {
+    public String readOption() {
+        return null;
+    }
+
+    public String readName() {
         return null;
     }
 }
