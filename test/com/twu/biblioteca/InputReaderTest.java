@@ -31,8 +31,20 @@ public class InputReaderTest {
     }
 
     @Test
-    public void should_return_invalid_when_inpu_option_non_digit() throws NoSuchFieldException, IllegalAccessException {
+    public void should_return_input_option_when_has_spaces() throws NoSuchFieldException, IllegalAccessException {
+        setInputStream(" 1 ");
+        assertThat(reader.readOption()).isEqualTo("1");
+    }
+
+    @Test
+    public void should_return_invalid_when_input_option_non_digit() throws NoSuchFieldException, IllegalAccessException {
         setInputStream("a");
         assertThat(reader.readOption()).isEqualTo("invalid");
+    }
+
+    @Test
+    public void should_return_book_name_when_input() throws NoSuchFieldException, IllegalAccessException {
+        setInputStream(" Head First Java ");
+        assertThat(reader.readName()).isEqualTo("Head First Java");
     }
 }

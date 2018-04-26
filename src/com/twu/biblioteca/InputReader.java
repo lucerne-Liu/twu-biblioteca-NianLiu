@@ -13,12 +13,12 @@ public class InputReader {
     }
 
     public String readOption() {
-        String inputString = scanner.next();
-        Pattern pattern = Pattern.compile("[0-9]*");
+        String inputString = scanner.next().trim();
+        Pattern pattern = Pattern.compile("-?[0-9]*");
         return pattern.matcher(inputString).matches() ? inputString : "invalid";
     }
 
     public String readName() {
-        return null;
+        return scanner.next().trim();
     }
 }
