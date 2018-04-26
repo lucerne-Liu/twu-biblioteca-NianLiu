@@ -37,4 +37,12 @@ public class BibliotecaApp {
         }
         printGoodbyeMessage();
     }
+
+    public void printBooksList() {
+        System.out.print("Book List\n"
+                + "Author |Year Published\n" +
+                "========================\n" +
+                "Head First Java|2003\n" +
+                "========================\n");
+    }
 }

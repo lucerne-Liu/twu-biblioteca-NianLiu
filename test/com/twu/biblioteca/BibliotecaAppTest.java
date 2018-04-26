@@ -6,6 +6,9 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.*;
 import static org.fest.assertions.api.Assertions.assertThat;
@@ -57,6 +60,16 @@ public class BibliotecaAppTest {
         bibliotecaApp.init();
         assertTrue(systemOut().contains("1. List Books\n2. Quit\nPlease enter your choice(1～2):\n"));
         verify(reader,times(2)).read();
+    }
+
+    @Test
+    public void should_print_book_list(){
+        bibliotecaApp.printBooksList();
+        assertThat(systemOut()).isEqualTo("Book List\n"
+                + "Author |Year Published\n" +
+                "========================\n" +
+                "Head First Java|2003\n" +
+                "========================\n");
     }
 
     private String systemOut(){
