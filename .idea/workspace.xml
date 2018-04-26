@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,12 +35,12 @@
       <file leaf-file-name="BibliotecaAppTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="151" column="40" lean-forward="true" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+            <state relative-caret-position="187">
+              <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8641#8642#0" expanded="true" />
-                <element signature="e#8688#8689#0" expanded="true" />
+                <element signature="e#9043#9044#0" expanded="true" />
+                <element signature="e#9090#9091#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,8 +133,8 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/InputReader.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
       </list>
     </option>
   </component>
@@ -146,8 +145,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="169" />
-    <option name="y" value="231" />
+    <option name="x" value="141" />
+    <option name="y" value="176" />
     <option name="width" value="1529" />
     <option name="height" value="885" />
   </component>
@@ -242,7 +241,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in biblioteca">
+  <component name="RunManager" selected="JUnit.BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -309,6 +308,31 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="biblioteca" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
+      <option name="METHOD_NAME" value="should_print_successful_return_message_when_book_name_correct_but_no_spaces" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="BibliotecaAppTest.should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -322,31 +346,6 @@
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
       <option name="METHOD_NAME" value="should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="BibliotecaAppTest.should_prompt_successful_msg_when_checked_out" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="biblioteca" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="should_prompt_successful_msg_when_checked_out" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -448,16 +447,16 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_show_returned_book_in_list_when_returned" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_successful_msg_when_checked_out" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_successful_return_message_when_book_in_the_library" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_successful_return_message_when_book_in_the_library" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_successful_return_message_when_book_in_the_library" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_show_returned_book_in_list_when_returned" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_successful_msg_when_checked_out" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_show_returned_book_in_list_when_returned" />
       </list>
     </recent_temporary>
   </component>
@@ -475,7 +474,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524739171739</updated>
       <workItem from="1524739173105" duration="10697000" />
-      <workItem from="1524751337066" duration="11974000" />
+      <workItem from="1524751337066" duration="12677000" />
     </task>
     <task id="LOCAL-00001" summary="test:add test &quot;should_print_welcome_message_when_start_app&quot;">
       <created>1524741679516</created>
@@ -638,14 +637,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524765002743</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat:implement test &quot;should_print_successful_return_message_when_book_in_the_library&quot;">
+      <created>1524765144393</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1524765144393</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_biblioteca - 2018.04.27 at 01h 41m 09s.xml">
+    <history-entry file="All_in_biblioteca - 2018.04.27 at 01h 52m 08s.xml">
       <configuration name="All in biblioteca" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_biblioteca - 2018.04.27 at 01h 52m 08s.xml">
+    <history-entry file="All_in_biblioteca - 2018.04.27 at 02h 00m 21s.xml">
       <configuration name="All in biblioteca" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_in_the_library - 2018.04.27 at 01h 49m 12s.xml">
@@ -654,30 +660,30 @@
     <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_in_the_library - 2018.04.27 at 01h 52m 05s.xml">
       <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_in_the_library" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces - 2018.04.27 at 01h 43m 36s.xml">
+    <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_in_the_library - 2018.04.27 at 01h 59m 24s.xml">
+      <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_in_the_library" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_in_the_library - 2018.04.27 at 01h 59m 48s.xml">
+      <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_in_the_library" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_in_the_library - 2018.04.27 at 02h 00m 38s.xml">
+      <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_in_the_library" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_in_the_library - 2018.04.27 at 02h 02m 48s.xml">
+      <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_in_the_library" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_name_correct_but_no_spaces - 2018.04.27 at 02h 03m 45s.xml">
+      <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BibliotecaAppTest_should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces - 2018.04.27 at 02h 01m 56s.xml">
       <configuration name="BibliotecaAppTest.should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_should_prompt_successful_msg_when_checked_out - 2018.04.27 at 01h 43m 31s.xml">
-      <configuration name="BibliotecaAppTest.should_prompt_successful_msg_when_checked_out" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_should_show_returned_book_in_list_when_returned - 2018.04.27 at 01h 42m 17s.xml">
-      <configuration name="BibliotecaAppTest.should_show_returned_book_in_list_when_returned" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_should_show_returned_book_in_list_when_returned - 2018.04.27 at 01h 42m 32s.xml">
-      <configuration name="BibliotecaAppTest.should_show_returned_book_in_list_when_returned" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_should_show_returned_book_in_list_when_returned - 2018.04.27 at 01h 43m 10s.xml">
-      <configuration name="BibliotecaAppTest.should_show_returned_book_in_list_when_returned" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_should_show_returned_book_in_list_when_returned - 2018.04.27 at 01h 43m 54s.xml">
-      <configuration name="BibliotecaAppTest.should_show_returned_book_in_list_when_returned" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22671000" />
+    <option name="totallyTimeSpent" value="23374000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="169" y="231" width="1529" height="885" extended-state="0" />
+    <frame x="141" y="176" width="1529" height="885" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -770,7 +776,8 @@
     <MESSAGE value="feat:implement test &quot;should_show_returned_book_in_list_when_returned&quot;" />
     <MESSAGE value="refactor:refactor the Book and Library" />
     <MESSAGE value="test:add test &quot;should_print_successful_return_message_when_book_in_the_library&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_print_successful_return_message_when_book_in_the_library&quot;" />
+    <MESSAGE value="feat:implement test &quot;should_print_successful_return_message_when_book_in_the_library&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:implement test &quot;should_print_successful_return_message_when_book_in_the_library&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -833,8 +840,8 @@
           <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8641#8642#0" expanded="true" />
-            <element signature="e#8688#8689#0" expanded="true" />
+            <element signature="e#9043#9044#0" expanded="true" />
+            <element signature="e#9090#9091#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1009,20 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1511#1512#0" expanded="true" />
-            <element signature="e#1566#1567#0" expanded="true" />
-            <element signature="e#1612#1613#0" expanded="true" />
-            <element signature="e#1668#1669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../student-grade-command-basic-java/src/test/java/com/tw/LibraryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2599">
@@ -1046,14 +1039,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="151" column="40" lean-forward="true" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+        <state relative-caret-position="-368">
+          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8641#8642#0" expanded="true" />
-            <element signature="e#8688#8689#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1566#1567#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1668#1669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9043#9044#0" expanded="true" />
+            <element signature="e#9090#9091#0" expanded="true" />
           </folding>
         </state>
       </provider>

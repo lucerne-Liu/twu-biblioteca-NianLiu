@@ -20,6 +20,7 @@ public class BibliotecaAppTest {
     public static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Return Book\n4. Quit\nPlease enter your choice(1～4):\n";
     public static final String EXIST_BOOK_NAME = "Head First Java";
     public static final String ABSENT_BOOK_NAME = "Head First Python";
+    public static final String CORRECT_BOOK_NAME_WITH_NO_SPACES = "HeadFirstJava";
     private BibliotecaApp bibliotecaApp;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -107,11 +108,9 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces() {
-        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn("HeadFirstJava");
-        bibliotecaApp.init();
+        when(reader.readName()).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
+        bibliotecaApp.checkOutBook();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
-        verify(reader, times(2)).readOption();
     }
 
     @Test
@@ -147,6 +146,15 @@ public class BibliotecaAppTest {
         bibliotecaApp.returnBook();
         assertThat(systemOut().endsWith("Thank you for returning the book.\n")).isTrue();
     }
+
+    @Test
+    public void should_print_successful_return_message_when_book_name_correct_but_no_spaces(){
+        when(reader.readOption()).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains("Thank you for returning the book.\n")).isTrue();
+    }
+
 
     private String systemOut() {
         return outputContent.toString();
