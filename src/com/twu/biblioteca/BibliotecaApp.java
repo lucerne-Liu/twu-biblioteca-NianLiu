@@ -24,7 +24,7 @@ public class BibliotecaApp {
                 printBooksList();
                 return true;
             case 2:
-                checkOutBook(reader.readName());
+                checkOutBook();
                 return true;
             case 3:
                 return false;
@@ -50,9 +50,18 @@ public class BibliotecaApp {
         printGoodbyeMessage();
     }
 
-    public void checkOutBook(String name) {
-        System.out.println("Please input the book name you want to check out:");
-        library.checkOutBook(name);
-        System.out.println("Thank you! Enjoy the book");
+    public void checkOutBook() {
+        while (true) {
+            System.out.println("Please input the book name you want to check out:");
+            if (library.checkOutBook(reader.readName())) {
+                System.out.println("Thank you! Enjoy the book");
+                break;
+            }else{
+                System.out.print("That book is not available.\n");
+            }
+        }
+
+
+
     }
 }

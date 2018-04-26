@@ -17,6 +17,8 @@ public class BibliotecaAppTest {
     public static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Quit\nPlease enter your choice(1～3):\n";
     public static final String BOOK_LIST_OPTION = "1";
     public static final String CHECK_OUT_OPTION = "2";
+    public static final String EXIST_BOOK_NAME = "Head First Java";
+    public static final String ABSENT_BOOK_NAME = "Head First Python";
     private BibliotecaApp bibliotecaApp;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -81,7 +83,8 @@ public class BibliotecaAppTest {
     
     @Test
     public void should_not_show_checked_out_books_after_check_out(){
-        bibliotecaApp.checkOutBook("Head First Java");
+        when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
+        bibliotecaApp.checkOutBook();
         bibliotecaApp.printBooksList();
         assertThat(systemOut()).contains(
                 "Name                                              Author                                            Year Published                                    \n" +
@@ -95,7 +98,7 @@ public class BibliotecaAppTest {
     @Test
     public void should_prompt_successful_msg_when_checked_out(){
         when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn("Head First Java");
+        when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
     }
@@ -103,7 +106,7 @@ public class BibliotecaAppTest {
     @Test
     public void should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list(){
         when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn("Head First Python");
+        when(reader.readName()).thenReturn(ABSENT_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That book is not available.\n"
                 + "Please input the book name you want to check out:")).isTrue();

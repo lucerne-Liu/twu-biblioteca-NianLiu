@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import org.fest.assertions.internal.Booleans;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +25,10 @@ public class Library {
         bookList.forEach(item -> System.out.print(item.toString()));
     }
 
-    public void checkOutBook(String name) {
+    public boolean checkOutBook(String name) {
+        Boolean hasThisBook = bookList.stream().map(Book::getName).anyMatch(item -> item == name);
         bookList.removeIf(item -> item.getName() == name);
+        return hasThisBook;
     }
+
 }
