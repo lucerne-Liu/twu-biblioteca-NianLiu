@@ -6,9 +6,6 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.Assert.*;
 import static org.fest.assertions.api.Assertions.assertThat;
@@ -65,11 +62,14 @@ public class BibliotecaAppTest {
     @Test
     public void should_print_book_list(){
         bibliotecaApp.printBooksList();
-        assertThat(systemOut()).isEqualTo("Book List\n"
-                + "Name|Author|Year Published\n" +
-                "========================\n" +
-                "Head First Java|Kent Belt|2003\n" +
-                "========================\n");
+        assertThat(systemOut()).isEqualTo(
+                "Name                                              Author                                            Year Published                                    \n" +
+                "===================================================================================================================\n" +
+                "Head First Java                                   Kent Belt                                         2003                                              \n" +
+                "Test-Driven Development                           Kent Belt                                         2004                                              \n" +
+                "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
+                "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
+                "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
     }
 
     private String systemOut(){

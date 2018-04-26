@@ -2,9 +2,11 @@ package com.twu.biblioteca;
 
 public class BibliotecaApp {
     private InputReader reader;
+    private Library library;
 
     public BibliotecaApp(InputReader reader) {
         this.reader = reader;
+        library = new Library();
     }
 
     public void printWelcomeMessage() {
@@ -39,10 +41,6 @@ public class BibliotecaApp {
     }
 
     public void printBooksList() {
-        System.out.print("Book List\n"
-                + "Name|Author|Year Published\n" +
-                "========================\n" +
-                "Head First Java|Kent Belt|2003\n" +
-                "========================\n");
+        library.printBookList();
     }
 }
