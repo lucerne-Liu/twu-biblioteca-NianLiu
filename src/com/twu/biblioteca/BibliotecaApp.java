@@ -7,17 +7,12 @@ public class BibliotecaApp {
         this.reader = reader;
     }
 
-    public void init() {
-        printWelcomeMessage();
-        printMainMenu();
-    }
-
     public void printWelcomeMessage() {
         System.out.println("Welcome to use the Biblioteca!");
     }
 
     public void printMainMenu() {
-        System.out.print("1. List Books\n2. Quit\nPlease enter your choice(1～2):");
+        System.out.print("1. List Books\n2. Quit\nPlease enter your choice(1～2):\n");
     }
 
     public boolean proceedMainMenu() {
@@ -26,10 +21,17 @@ public class BibliotecaApp {
             case 1:
                 return true;
             case 2:
-                return true;
+                return false;
             default:
                 System.out.print("Select a valid option! Please select again.\n");
-                return false;
+                return true;
+        }
+    }
+
+    public void init() {
+        printWelcomeMessage();
+        while (proceedMainMenu()) {
+
         }
     }
 }

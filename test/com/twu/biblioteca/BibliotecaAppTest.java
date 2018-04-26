@@ -28,13 +28,12 @@ public class BibliotecaAppTest {
     public void should_print_welcome_message_when_start_app(){
         bibliotecaApp.printWelcomeMessage();
         assertTrue(systemOut().startsWith("Welcome to use the Biblioteca!"));
-//        assertThat(systemOut().startsWith("Welcome to use the Biblioteca!"));
     }
     
     @Test
     public void should_print_main_menu_after_welcome_message(){
         bibliotecaApp.printMainMenu();
-        assertTrue(systemOut().endsWith("1. List Books\n2. Quit\nPlease enter your choice(1～2):"));
+        assertTrue(systemOut().endsWith("1. List Books\n2. Quit\nPlease enter your choice(1～2):\n"));
     }
 
     @Test
@@ -49,7 +48,7 @@ public class BibliotecaAppTest {
         when(reader.read()).thenReturn("3").thenReturn("2");
         bibliotecaApp.init();
         assertTrue(systemOut().endsWith("Select a valid option! Please select again.\n"
-                + "1. List Books\n2. Quit\nPlease enter your choice(1～2):"));
+                + "1. List Books\n2. Quit\nPlease enter your choice(1～2):\n"));
     }
 
     private String systemOut(){
