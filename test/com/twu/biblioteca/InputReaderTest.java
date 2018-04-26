@@ -29,4 +29,10 @@ public class InputReaderTest {
         setInputStream("1");
         assertThat(reader.readOption()).isEqualTo("1");
     }
+
+    @Test
+    public void should_return_invalid_when_inpu_option_non_digit() throws NoSuchFieldException, IllegalAccessException {
+        setInputStream("a");
+        assertThat(reader.readOption()).isEqualTo("invalid");
+    }
 }
