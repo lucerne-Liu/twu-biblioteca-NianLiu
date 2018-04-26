@@ -44,6 +44,14 @@ public class BibliotecaAppTest {
         assertTrue(systemOut().endsWith("Select a valid option! Please select again.\n"));
     }
 
+    @Test
+    public void should_print_main_menu_again_when_input_invalid(){
+        when(reader.read()).thenReturn("3").thenReturn("2");
+        bibliotecaApp.init();
+        assertTrue(systemOut().endsWith("Select a valid option! Please select again.\n"
+                + "1. List Books\n2. Quit\nPlease enter your choice(1～2):"));
+    }
+
     private String systemOut(){
         return outputContent.toString();
     }
