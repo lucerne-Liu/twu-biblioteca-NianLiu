@@ -26,7 +26,7 @@ public class Library {
 
     public boolean changeBookRentStatus(String name, boolean isRent) {
         Book checkOutBook = new Book(name, "", 0);
-        Boolean hasThisBook = bookList.stream().anyMatch(item -> item.equals(checkOutBook));
+        Boolean hasThisBook = bookList.stream().anyMatch(item -> item.equals(checkOutBook) && item.getRentedStatus() == !isRent);
         if (hasThisBook) {
             bookList.stream().filter(book -> book.equals(checkOutBook)).forEach(book -> book.setRented(isRent));
         }

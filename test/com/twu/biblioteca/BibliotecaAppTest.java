@@ -12,6 +12,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
+    public static final String ANOTHER_EXIST_BOOK_NAME = "Head First JavaScript";
     private static final String BOOK_LIST_OPTION = "1";
     private static final String CHECK_OUT_OPTION = "2";
     private static final String RETURN_BOOK_OPTION = "3";
@@ -131,11 +132,12 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_prompt_unsuccessful_message_when_input_book_already_checked_out() {
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME).thenReturn(ANOTHER_EXIST_BOOK_NAME);
         bibliotecaApp.checkOutBook();
         bibliotecaApp.checkOutBook();
         assertThat(systemOut().contains("That book is not available.\n"
                 + "Please input the book name you want to check out:")).isTrue();
+        verify(reader, times(3)).readName();
     }
 
     @Test
@@ -165,11 +167,11 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_print_successful_return_message_when_book_name_correct_but_no_spaces(){
-        when(reader.readOption()).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you for returning the book.\n")).isTrue();
-        verify(reader, times(2)).readOption();
+        verify(reader, times(3)).readOption();
     }
 
     @Test
@@ -187,6 +189,13 @@ public class BibliotecaAppTest {
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
                         "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
 
+    }
+
+    @Test
+    public void should_print_unsuccessful_return_message_when_book_name_right_but_not_rent_from_this_library(){
+        when(reader.readName()).thenReturn(ABSENT_BOOK_NAME);
+        bibliotecaApp.returnBook();
+        assertThat(systemOut().endsWith("That is not a valid book to return.\n")).isTrue();
     }
 
 
