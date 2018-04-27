@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VideoStore {
-    public static final String DIVIDER = "============================================================"
+    private static final String DIVIDER = "============================================================"
             + "===========================================\n";
     private List<Movie> moviesList;
 
@@ -23,5 +23,14 @@ public class VideoStore {
         System.out.print(String.format("%-30s%-30s%-30s%-30s\n" + DIVIDER, "Name", "Year", "Director","Movie Rating"));
         moviesList.stream().filter(movie -> !movie.getRentedStatus()).forEach(item -> System.out.print(item.toString()));
         System.out.print(DIVIDER);
+    }
+
+    public boolean checkOutMovie(String name) {
+        Movie checkOutMovie = new Movie(name, "", "");
+        Boolean hasThisMovie = moviesList.stream().anyMatch(item -> item.equals(checkOutMovie) && !item.getRentedStatus());
+        if (hasThisMovie) {
+            moviesList.stream().filter(movie -> movie.equals(checkOutMovie)).forEach(movie -> movie.setRented(true));
+        }
+        return hasThisMovie;
     }
 }

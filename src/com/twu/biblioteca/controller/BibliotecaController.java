@@ -40,7 +40,12 @@ public class BibliotecaController {
         videoStore.printMoviesList();
     }
 
-    public static void main(String[] args) {
-        new BibliotecaController(new InputReader()).printMoviesList();
+    public void checkOutMovie() {
+        System.out.println("Please input the movie name you want to check out:");
+        if (videoStore.checkOutMovie(reader.readName())) {
+            System.out.print("Thank you! Enjoy the Movie.\n");
+        }else{
+            System.out.print("That Movie is not available.\n");
+        }
     }
 }

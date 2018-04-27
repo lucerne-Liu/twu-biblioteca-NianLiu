@@ -13,7 +13,7 @@ public class Book {
         isRented = false;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 
@@ -25,7 +25,7 @@ public class Book {
         return isRented;
     }
 
-    public String removeSpacesInName(String name) {
+    private String removeSpacesInName(String name) {
         return name.replaceAll(" ", "");
     }
 

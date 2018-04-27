@@ -32,9 +32,19 @@ public class Movie {
         isRented = rented;
     }
 
+    private String removeSpacesInName(String name) {
+        return name.replaceAll(" ", "");
+    }
+
     @Override
     public String toString() {
         return String.format("%-30s%-30s%-30s%-30s\n", name, year, director, rating);
+    }
+
+    @Override
+    public boolean equals(Object object){
+        Movie anotherMovie = (Movie)object;
+        return removeSpacesInName(name).equals(removeSpacesInName(anotherMovie.getName()));
     }
 
 }
