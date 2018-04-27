@@ -1,6 +1,5 @@
 package com.twu.biblioteca.controller;
 
-import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.command.InputReader;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +14,7 @@ public class BibliotecaControllerTest {
     private static final String EXIST_BOOK_NAME = "Head First Java";
     private static final String ABSENT_BOOK_NAME = "Head First Python";
     private static final String CORRECT_BOOK_NAME_WITH_NO_SPACES = "HeadFirstJava";
+    public static final String EXIST_MOVIE_NAME = "Kings";
     private BibliotecaController bibliotecaController;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -41,7 +41,7 @@ public class BibliotecaControllerTest {
     }
 
     @Test
-    public void should_prompt_successful_msg_when_checked_out() {
+    public void should_prompt_successful_msg_when_checked_out_book() {
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaController.checkOutBook();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
@@ -97,6 +97,13 @@ public class BibliotecaControllerTest {
                 "Disobedience                  2017                          Sebastián Lelioo              6.4                           \n" +
                 "Love & Bananas                2018                          Ashley Bell                   unrated                       \n" +
                 "=======================================================================================================\n");
+    }
+
+    @Test
+    public void should_prompt_successful_msg_when_checked_out_movie() {
+        when(reader.readName()).thenReturn(EXIST_MOVIE_NAME);
+        bibliotecaController.checkOutMovie();
+        assertThat(systemOut()).isEqualTo("Thank you! Enjoy the Movie.");
     }
 
     private String systemOut() {
