@@ -6,8 +6,8 @@ import com.twu.biblioteca.model.Book;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Library {
-    public static final String DIVIDER = "============================================================"
+public class Library implements RentImplement {
+    private static final String DIVIDER = "============================================================"
             + "=======================================================\n";
     private List<Book> bookList;
 
@@ -21,7 +21,8 @@ public class Library {
         }};
     }
 
-    public void printBookList() {
+    @Override
+    public void printMediaList() {
         System.out.print(String.format("%-50s%-50s%-50s\n" + DIVIDER, "Name", "Author", "Year Published"));
         bookList.stream().filter(book -> !book.getRentedStatus()).forEach(item -> System.out.print(item.toString()));
     }
@@ -35,11 +36,13 @@ public class Library {
         return hasThisBook;
     }
 
-    public boolean checkOutBook(String name) {
+    @Override
+    public boolean checkOutMedia(String name) {
         return changeBookRentStatus(name, true);
     }
 
-    public boolean returnBook(String name) {
+    @Override
+    public boolean returnMedia(String name) {
         return changeBookRentStatus(name, false);
     }
 }

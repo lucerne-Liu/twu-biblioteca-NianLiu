@@ -16,13 +16,13 @@ public class BibliotecaController {
     }
 
     public void printBooksList() {
-        library.printBookList();
+        library.printMediaList();
     }
 
     public void checkOutBook() {
         while (true) {
             System.out.println("Please input the book name you want to check out:");
-            if (library.checkOutBook(reader.readName())) {
+            if (library.checkOutMedia(reader.readName())) {
                 System.out.println("Thank you! Enjoy the book");
                 break;
             }else{
@@ -33,16 +33,16 @@ public class BibliotecaController {
 
     public void returnBook() {
         System.out.println("Please input the book name you want to return:");
-        System.out.print(library.returnBook(reader.readName()) ? "Thank you for returning the book.\n" : "That is not a valid book to return.\n");
+        System.out.print(library.returnMedia(reader.readName()) ? "Thank you for returning the book.\n" : "That is not a valid book to return.\n");
     }
 
     public void printMoviesList() {
-        videoStore.printMoviesList();
+        videoStore.printMediaList();
     }
 
     public void checkOutMovie() {
         System.out.println("Please input the movie name you want to check out:");
-        if (videoStore.checkOutMovie(reader.readName())) {
+        if (videoStore.checkOutMedia(reader.readName())) {
             System.out.print("Thank you! Enjoy the Movie.\n");
         }else{
             System.out.print("That Movie is not available.\n");

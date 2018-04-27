@@ -5,7 +5,7 @@ import com.twu.biblioteca.model.Movie;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VideoStore {
+public class VideoStore implements RentImplement {
     private static final String DIVIDER = "============================================================"
             + "===========================================\n";
     private List<Movie> moviesList;
@@ -19,18 +19,25 @@ public class VideoStore {
         }};
     }
 
-    public void printMoviesList() {
-        System.out.print(String.format("%-30s%-30s%-30s%-30s\n" + DIVIDER, "Name", "Year", "Director","Movie Rating"));
+    @Override
+    public void printMediaList() {
+        System.out.print(String.format("%-30s%-30s%-30s%-30s\n" + DIVIDER, "Name", "Year", "Director", "Movie Rating"));
         moviesList.stream().filter(movie -> !movie.getRentedStatus()).forEach(item -> System.out.print(item.toString()));
         System.out.print(DIVIDER);
     }
 
-    public boolean checkOutMovie(String name) {
+    @Override
+    public boolean checkOutMedia(String name) {
         Movie checkOutMovie = new Movie(name, "", "");
         Boolean hasThisMovie = moviesList.stream().anyMatch(item -> item.equals(checkOutMovie) && !item.getRentedStatus());
         if (hasThisMovie) {
             moviesList.stream().filter(movie -> movie.equals(checkOutMovie)).forEach(movie -> movie.setRented(true));
         }
         return hasThisMovie;
+    }
+
+    @Override
+    public boolean returnMedia(String name) {
+        return false;
     }
 }

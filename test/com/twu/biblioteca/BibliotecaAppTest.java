@@ -33,7 +33,6 @@ public class BibliotecaAppTest {
     private static final String ABSENT_BOOK_NAME = "Head First Python";
     private static final String CORRECT_BOOK_NAME_WITH_NO_SPACES = "HeadFirstJava";
     private static final String EXIST_MOVIE_NAME = "Avengers: Infinity War";
-    private static final String ANOTHER_EXIST_MOVIE_NAME = "Disobedience";
     private BibliotecaApp bibliotecaApp;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -225,10 +224,10 @@ public class BibliotecaAppTest {
     @Test
     public void should_prompt_unsuccessful_message_when_input_movie_already_checked_out() {
         when(reader.readOption()).thenReturn(CHECK_OUT_MOVIE_OPTION).thenReturn(CHECK_OUT_MOVIE_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_MOVIE_NAME).thenReturn(EXIST_BOOK_NAME).thenReturn(ANOTHER_EXIST_MOVIE_NAME);
+        when(reader.readName()).thenReturn(EXIST_MOVIE_NAME).thenReturn(EXIST_MOVIE_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That Movie is not available.\n")).isTrue();
-        verify(reader, times(3)).readName();
+        verify(reader, times(2)).readName();
     }
 
     private String systemOut() {

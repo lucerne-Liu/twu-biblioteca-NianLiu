@@ -1,5 +1,6 @@
 package com.twu.biblioteca.model;
 
+
 public class Movie {
     private String name;
     private String year;
@@ -42,8 +43,8 @@ public class Movie {
     }
 
     @Override
-    public boolean equals(Object object){
-        Movie anotherMovie = (Movie)object;
+    public boolean equals(Object object) {
+        Movie anotherMovie = (Movie) object;
         return removeSpacesInName(name).equals(removeSpacesInName(anotherMovie.getName()));
     }
 
