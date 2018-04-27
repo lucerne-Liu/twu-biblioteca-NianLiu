@@ -30,7 +30,7 @@ public class BibliotecaControllerTest {
     @Test
     public void should_print_book_list() {
         bibliotecaController.printBooksList();
-        assertThat(systemOut()).contains(
+        assertThat(systemOut()).isEqualTo(
                 "Name                                              Author                                            Year Published                                    \n" +
                         "===================================================================================================================\n" +
                         "Head First Java                                   Kent Belt                                         2003                                              \n" +
@@ -63,7 +63,7 @@ public class BibliotecaControllerTest {
     }
 
     @Test
-    public void should_print_successful_return_message_when_book_in_the_library(){
+    public void should_print_successful_return_message_when_book_in_the_library() {
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaController.checkOutBook();
         bibliotecaController.returnBook();
@@ -71,7 +71,7 @@ public class BibliotecaControllerTest {
     }
 
     @Test
-    public void should_print_successful_return_message_when_book_name_correct_but_no_spaces(){
+    public void should_print_successful_return_message_when_book_name_correct_but_no_spaces() {
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
         bibliotecaController.checkOutBook();
         bibliotecaController.returnBook();
@@ -80,11 +80,18 @@ public class BibliotecaControllerTest {
     }
 
     @Test
-    public void should_print_unsuccessful_return_message_when_book_name_wrong(){
+    public void should_print_unsuccessful_return_message_when_book_name_wrong() {
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(ABSENT_BOOK_NAME);
         bibliotecaController.checkOutBook();
         bibliotecaController.returnBook();
         assertThat(systemOut().endsWith("That is not a valid book to return.\n")).isTrue();
+    }
+
+    @Test
+    public void should_print_movies_list() {
+        bibliotecaController.printMoviesList();
+        assertThat(systemOut()).isEqualTo("name|year|director|rating\n"
+                + "Avengers: Infinity War|2018|Anthony Russo, Joe Russo|9.2\n");
     }
 
     private String systemOut() {

@@ -2,6 +2,7 @@ package com.twu.biblioteca;
 
 
 import com.twu.biblioteca.command.InputReader;
+import com.twu.biblioteca.status.OptionStatus;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,8 +18,8 @@ public class BibliotecaAppTest {
     private static final String CHECK_OUT_OPTION = OptionStatus.Checkout_Book;
     private static final String RETURN_BOOK_OPTION = OptionStatus.Return_Book;
     private static final String QUIT_OPTION = OptionStatus.Quit;
-    private static final String INVALID_OPTION = "5";
-    private static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Return Book\n4. Quit\nPlease enter your choice(1～4):\n";
+    private static final String INVALID_OPTION = OptionStatus.INVALID_OPTION;
+    private static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Return Book\n4. List Movies\n5. Quit\nPlease enter your choice(1～5):\n";
     private static final String EXIST_BOOK_NAME = "Head First Java";
     private static final String ANOTHER_EXIST_BOOK_NAME = "Head First JavaScript";
     private static final String ABSENT_BOOK_NAME = "Head First Python";
@@ -81,14 +82,14 @@ public class BibliotecaAppTest {
     public void should_print_book_list_when_choose_List_Books() {
         when(reader.readOption()).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
         bibliotecaApp.init();
-        assertThat(systemOut()).contains(
+        assertTrue(systemOut().contains(
                 "Name                                              Author                                            Year Published                                    \n" +
                         "===================================================================================================================\n" +
                         "Head First Java                                   Kent Belt                                         2003                                              \n" +
                         "Test-Driven Development                           Kent Belt                                         2004                                              \n" +
                         "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
-                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
+                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n"));
         verify(reader, times(2)).readOption();
     }
 
@@ -97,13 +98,13 @@ public class BibliotecaAppTest {
         when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
-        assertThat(systemOut()).contains(
+        assertThat(systemOut().contains(
                 "Name                                              Author                                            Year Published                                    \n" +
                         "===================================================================================================================\n" +
                         "Test-Driven Development                           Kent Belt                                         2004                                              \n" +
                         "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
-                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
+                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n")).isTrue();
     }
 
     @Test
@@ -139,14 +140,14 @@ public class BibliotecaAppTest {
         when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
-        assertThat(systemOut()).contains(
+        assertThat(systemOut().contains(
                 "Name                                              Author                                            Year Published                                    \n" +
                         "===================================================================================================================\n" +
                         "Head First Java                                   Kent Belt                                         2003                                              \n" +
                         "Test-Driven Development                           Kent Belt                                         2004                                              \n" +
                         "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
-                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
+                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n")).isTrue();;
         verify(reader, times(2)).readName();
     }
 
@@ -165,13 +166,13 @@ public class BibliotecaAppTest {
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(ABSENT_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That is not a valid book to return.\n")).isTrue();
-        assertThat(systemOut()).contains(
+        assertThat(systemOut().contains(
                 "Name                                              Author                                            Year Published                                    \n" +
                         "===================================================================================================================\n" +
                         "Test-Driven Development                           Kent Belt                                         2004                                              \n" +
                         "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
-                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n");
+                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n")).isTrue();
 
         verify(reader, times(4)).readOption();
     }
