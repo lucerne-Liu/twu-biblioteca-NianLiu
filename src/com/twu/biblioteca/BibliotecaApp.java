@@ -43,6 +43,9 @@ public class BibliotecaApp {
             case OptionStatus.List_Movies:
                 bibliotecaController.printMoviesList();
                 return true;
+            case OptionStatus.Checkout_Movie:
+                bibliotecaController.checkOutMovie();
+                return true;
             case OptionStatus.Quit:
                 return false;
             default:

@@ -199,9 +199,23 @@ public class BibliotecaAppTest {
     @Test
     public void should_print_movie_list_when_choose_List_Movies_option(){
         when(reader.readOption()).thenReturn(MOVIE_LIST_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
         assertThat(systemOut().contains("Name                          Year                          Director                      Movie Rating                  \n" +
                 "=======================================================================================================\n" +
                 "Avengers: Infinity War        2018                          Anthony Russo, Joe Russo      9.2                           \n" +
+                "Kings                         2017                          Deniz Gamze Ergüven           4.9                           \n" +
+                "Disobedience                  2017                          Sebastián Lelioo              6.4                           \n" +
+                "Love & Bananas                2018                          Ashley Bell                   unrated                       \n" +
+                "=======================================================================================================\n")).isTrue();
+    }
+
+    @Test
+    public void should_not_show_checked_out_movies_in_movie_list() {
+        when(reader.readOption()).thenReturn(CHECK_OUT_MOVIE_OPTION).thenReturn(MOVIE_LIST_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readName()).thenReturn(EXIST_MOVIE_NAME);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains("Name                          Year                          Director                      Movie Rating                  \n" +
+                "=======================================================================================================\n" +
                 "Kings                         2017                          Deniz Gamze Ergüven           4.9                           \n" +
                 "Disobedience                  2017                          Sebastián Lelioo              6.4                           \n" +
                 "Love & Bananas                2018                          Ashley Bell                   unrated                       \n" +
