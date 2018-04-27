@@ -21,13 +21,14 @@ public class BibliotecaAppTest {
     private static final String CHECK_OUT_MOVIE_OPTION = OptionStatus.Checkout_Movie;
     private static final String QUIT_OPTION = OptionStatus.Quit;
     private static final String INVALID_OPTION = OptionStatus.INVALID_OPTION;
-    private static final String MAIN_MENU = "1. List Books\n"
-            + "2. Checkout Book\n"
-            + "3. Return Book\n"
-            + "4. List Movies\n"
-            + "5. Check-out Movie\n"
-            + "6. Quit\n"
-            + "Please enter your choice(1～6):\n";
+    private static final String MAIN_MENU = "1. Login\n"
+            + "2. List Books\n"
+            + "3. Checkout Book\n"
+            + "4. Return Book\n"
+            + "5. List Movies\n"
+            + "6. Check-out Movie\n"
+            + "7. Quit\n"
+            + "Please enter your choice(1～7):\n";
     private static final String EXIST_BOOK_NAME = "Head First Java";
     private static final String ANOTHER_EXIST_BOOK_NAME = "Head First JavaScript";
     private static final String ABSENT_BOOK_NAME = "Head First Python";

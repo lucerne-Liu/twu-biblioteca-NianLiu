@@ -17,6 +17,8 @@ public class BibliotecaControllerTest {
     private static final String EXIST_MOVIE_NAME = "Avengers: Infinity War";
     private static final String EXIST_MOVIE_NAME_WITH_NO_SPACES = "Avengers:InfinityWar";
     private static final String ABSENT_MOVIE_NAME = "A Quiet Place";
+    public static final String EXIST_USER_NUMBER = "111-1111";
+    public static final String EXIST_USER_PWD = "123456";
     private BibliotecaController bibliotecaController;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -120,6 +122,15 @@ public class BibliotecaControllerTest {
     public void should_prompt_unsuccessful_msg_when_checked_out_movie_name_not_exist() {
         when(reader.readName()).thenReturn(ABSENT_MOVIE_NAME);
         bibliotecaController.checkOutMovie();
+        assertThat(systemOut().endsWith("That Movie is not available.\n")).isTrue();
+    }
+
+    @Test
+    public void should_prompt_successful_login_message_when_login_right(){
+        when(reader.readName()).thenReturn(EXIST_USER_NUMBER).thenReturn(EXIST_USER_PWD);
+        bibliotecaController.logIn();
+        assertThat(systemOut().startsWith("Please enter your library number(xxx-xxxx):\n")).isTrue();
+        assertThat(systemOut().contains("Please enter your password:\n")).isTrue();
         assertThat(systemOut().endsWith("That Movie is not available.\n")).isTrue();
     }
 
