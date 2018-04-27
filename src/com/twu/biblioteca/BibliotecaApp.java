@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 public class BibliotecaApp {
+    public static final String DEFAULT_WRONG_INPUT = "-999";
     private InputReader reader;
     private Library library;
 
@@ -19,17 +20,17 @@ public class BibliotecaApp {
 
     public boolean proceedMainMenu() {
         printMainMenu();
-        switch (Integer.parseInt(reader.readOption())) {
-            case 1:
+        switch (reader.readOption()) {
+            case OptionStatus.List_Books:
                 printBooksList();
                 return true;
-            case 2:
+            case OptionStatus.Checkout_Book:
                 checkOutBook();
                 return true;
-            case 3:
+            case OptionStatus.Return_Book:
                 returnBook();
                 return true;
-            case 4:
+            case OptionStatus.Quit:
                 return false;
             default:
                 System.out.print("Select a valid option! Please select again.\n");
@@ -45,14 +46,6 @@ public class BibliotecaApp {
         System.out.print("Goodbye! See you next time!\n");
     }
 
-    public void init() {
-        printWelcomeMessage();
-        while (proceedMainMenu()) {
-
-        }
-        printGoodbyeMessage();
-    }
-
     public void checkOutBook() {
         while (true) {
             System.out.println("Please input the book name you want to check out:");
@@ -63,12 +56,16 @@ public class BibliotecaApp {
                 System.out.print("That book is not available.\n");
             }
         }
-
-
-
     }
 
     public void returnBook() {
         System.out.print(library.returnBook(reader.readName()) ? "Thank you for returning the book.\n" : "That is not a valid book to return.\n");
     }
+
+    public void init() {
+        printWelcomeMessage();
+        while (proceedMainMenu()) { }
+        printGoodbyeMessage();
+    }
+
 }

@@ -12,15 +12,15 @@ import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
-    public static final String BOOK_LIST_OPTION = "1";
-    public static final String CHECK_OUT_OPTION = "2";
-    public static final String RETURN_BOOK_OPTION = "3";
-    public static final String QUIT_OPTION = "4";
-    public static final String INVALID_OPTION = "5";
-    public static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Return Book\n4. Quit\nPlease enter your choice(1～4):\n";
-    public static final String EXIST_BOOK_NAME = "Head First Java";
-    public static final String ABSENT_BOOK_NAME = "Head First Python";
-    public static final String CORRECT_BOOK_NAME_WITH_NO_SPACES = "HeadFirstJava";
+    private static final String BOOK_LIST_OPTION = "1";
+    private static final String CHECK_OUT_OPTION = "2";
+    private static final String RETURN_BOOK_OPTION = "3";
+    private static final String QUIT_OPTION = "4";
+    private static final String INVALID_OPTION = "5";
+    private static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Return Book\n4. Quit\nPlease enter your choice(1～4):\n";
+    private static final String EXIST_BOOK_NAME = "Head First Java";
+    private static final String ABSENT_BOOK_NAME = "Head First Python";
+    private static final String CORRECT_BOOK_NAME_WITH_NO_SPACES = "HeadFirstJava";
     private BibliotecaApp bibliotecaApp;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -46,8 +46,15 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void should_return_true_and_prompt_message_when_input_invalid() {
+    public void should_return_true_and_prompt_message_when_input_not_found() {
         when(reader.readOption()).thenReturn(INVALID_OPTION);
+        assertTrue(bibliotecaApp.proceedMainMenu());
+        assertThat(systemOut().endsWith("Select a valid option! Please select again.\n")).isTrue();
+    }
+
+    @Test
+    public void should_return_false_and_prompt_message_when_input_non_digit() {
+        when(reader.readOption()).thenReturn("aa");
         assertTrue(bibliotecaApp.proceedMainMenu());
         assertThat(systemOut().endsWith("Select a valid option! Please select again.\n")).isTrue();
     }
@@ -118,6 +125,15 @@ public class BibliotecaAppTest {
         when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(ABSENT_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
+        assertThat(systemOut().contains("That book is not available.\n"
+                + "Please input the book name you want to check out:")).isTrue();
+    }
+
+    @Test
+    public void should_prompt_unsuccessful_message_when_input_book_already_checked_out() {
+        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
+        bibliotecaApp.checkOutBook();
+        bibliotecaApp.checkOutBook();
         assertThat(systemOut().contains("That book is not available.\n"
                 + "Please input the book name you want to check out:")).isTrue();
     }
