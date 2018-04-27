@@ -13,10 +13,10 @@ import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
     public static final String ANOTHER_EXIST_BOOK_NAME = "Head First JavaScript";
-    private static final String BOOK_LIST_OPTION = "1";
-    private static final String CHECK_OUT_OPTION = "2";
-    private static final String RETURN_BOOK_OPTION = "3";
-    private static final String QUIT_OPTION = "4";
+    private static final String BOOK_LIST_OPTION = OptionStatus.List_Books;
+    private static final String CHECK_OUT_OPTION = OptionStatus.Checkout_Book;
+    private static final String RETURN_BOOK_OPTION = OptionStatus.Return_Book;
+    private static final String QUIT_OPTION = OptionStatus.Quit;
     private static final String INVALID_OPTION = "5";
     private static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Return Book\n4. Quit\nPlease enter your choice(1～4):\n";
     private static final String EXIST_BOOK_NAME = "Head First Java";

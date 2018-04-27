@@ -59,6 +59,7 @@ public class BibliotecaApp {
     }
 
     public void returnBook() {
+        System.out.println("Please input the book name you want to return:");
         System.out.print(library.returnBook(reader.readName()) ? "Thank you for returning the book.\n" : "That is not a valid book to return.\n");
     }
 
