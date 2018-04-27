@@ -16,6 +16,7 @@ public class BibliotecaControllerTest {
     private static final String CORRECT_BOOK_NAME_WITH_NO_SPACES = "HeadFirstJava";
     private static final String EXIST_MOVIE_NAME = "Avengers: Infinity War";
     private static final String EXIST_MOVIE_NAME_WITH_NO_SPACES = "Avengers:InfinityWar";
+    private static final String ABSENT_MOVIE_NAME = "A Quiet Place";
     private BibliotecaController bibliotecaController;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -104,6 +105,7 @@ public class BibliotecaControllerTest {
     public void should_prompt_successful_msg_when_checked_out_movie() {
         when(reader.readName()).thenReturn(EXIST_MOVIE_NAME);
         bibliotecaController.checkOutMovie();
+        assertThat(systemOut().startsWith("Please input the movie name you want to check out:")).isTrue();
         assertThat(systemOut().endsWith("Thank you! Enjoy the Movie.\n")).isTrue();
     }
 
@@ -112,6 +114,13 @@ public class BibliotecaControllerTest {
         when(reader.readName()).thenReturn(EXIST_MOVIE_NAME_WITH_NO_SPACES);
         bibliotecaController.checkOutMovie();
         assertThat(systemOut().endsWith("Thank you! Enjoy the Movie.\n")).isTrue();
+    }
+
+    @Test
+    public void should_prompt_unsuccessful_msg_when_checked_out_movie_name_not_exist() {
+        when(reader.readName()).thenReturn(ABSENT_MOVIE_NAME);
+        bibliotecaController.checkOutMovie();
+        assertThat(systemOut().endsWith("That Movie is not available.\n")).isTrue();
     }
 
     private String systemOut() {
