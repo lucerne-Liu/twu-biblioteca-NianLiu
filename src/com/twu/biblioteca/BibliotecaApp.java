@@ -1,7 +1,6 @@
 package com.twu.biblioteca;
 
 public class BibliotecaApp {
-    public static final String DEFAULT_WRONG_INPUT = "-999";
     private InputReader reader;
     private Library library;
 
