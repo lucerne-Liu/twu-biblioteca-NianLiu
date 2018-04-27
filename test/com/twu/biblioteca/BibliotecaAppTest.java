@@ -15,15 +15,26 @@ import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
     private static final String BOOK_LIST_OPTION = OptionStatus.List_Books;
-    private static final String CHECK_OUT_OPTION = OptionStatus.Checkout_Book;
+    private static final String CHECK_OUT_BOOK_OPTION = OptionStatus.Checkout_Book;
     private static final String RETURN_BOOK_OPTION = OptionStatus.Return_Book;
+    private static final String MOVIE_LIST_OPTION = OptionStatus.List_Movies;
+    private static final String CHECK_OUT_MOVIE_OPTION = OptionStatus.Checkout_Movie;
     private static final String QUIT_OPTION = OptionStatus.Quit;
     private static final String INVALID_OPTION = OptionStatus.INVALID_OPTION;
-    private static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Return Book\n4. List Movies\n5. Quit\nPlease enter your choice(1～5):\n";
+    private static final String MAIN_MENU = "1. List Books\n"
+            + "2. Checkout Book\n"
+            + "3. Return Book\n"
+            + "4. List Movies\n"
+            + "5. Check-out Movie\n"
+            + "6. Quit\n"
+            + "Please enter your choice(1～6):\n";
     private static final String EXIST_BOOK_NAME = "Head First Java";
     private static final String ANOTHER_EXIST_BOOK_NAME = "Head First JavaScript";
     private static final String ABSENT_BOOK_NAME = "Head First Python";
     private static final String CORRECT_BOOK_NAME_WITH_NO_SPACES = "HeadFirstJava";
+    private static final String EXIST_MOVIE_NAME = "Avengers: Infinity War";
+    private static final String EXIST_MOVIE_NAME_WITH_NO_SPACES = "Avengers:InfinityWar";
+    private static final String ABSENT_MOVIE_NAME = "A Quiet Place";
     private BibliotecaApp bibliotecaApp;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -95,7 +106,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_not_show_checked_out_books_after_check_out() {
-        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains(
@@ -109,7 +120,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_prompt_successful_msg_when_checked_out() {
-        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
@@ -118,7 +129,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list() {
-        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(ABSENT_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That book is not available.\n"
@@ -127,7 +138,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_prompt_unsuccessful_message_when_input_book_already_checked_out() {
-        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(CHECK_OUT_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME).thenReturn(ANOTHER_EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That book is not available.\n"
@@ -137,7 +148,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_show_returned_book_in_list_when_returned() {
-        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains(
@@ -153,7 +164,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_print_successful_return_message_when_book_name_correct_but_no_spaces(){
-        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you for returning the book.\n")).isTrue();
@@ -162,7 +173,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void should_print_unsuccessful_return_message_when_book_name_wrong(){
-        when(reader.readOption()).thenReturn(CHECK_OUT_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(ABSENT_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That is not a valid book to return.\n")).isTrue();
@@ -185,6 +196,17 @@ public class BibliotecaAppTest {
         assertThat(systemOut().contains("That is not a valid book to return.\n")).isTrue();
     }
 
+    @Test
+    public void should_print_movie_list_when_choose_List_Movies_option(){
+        when(reader.readOption()).thenReturn(MOVIE_LIST_OPTION).thenReturn(QUIT_OPTION);
+        assertThat(systemOut().contains("Name                          Year                          Director                      Movie Rating                  \n" +
+                "=======================================================================================================\n" +
+                "Avengers: Infinity War        2018                          Anthony Russo, Joe Russo      9.2                           \n" +
+                "Kings                         2017                          Deniz Gamze Ergüven           4.9                           \n" +
+                "Disobedience                  2017                          Sebastián Lelioo              6.4                           \n" +
+                "Love & Bananas                2018                          Ashley Bell                   unrated                       \n" +
+                "=======================================================================================================\n")).isTrue();
+    }
 
     private String systemOut() {
         return outputContent.toString();

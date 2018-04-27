@@ -5,7 +5,13 @@ import com.twu.biblioteca.controller.BibliotecaController;
 import com.twu.biblioteca.status.OptionStatus;
 
 public class BibliotecaApp {
-    public static final String MAIN_MENU = "1. List Books\n2. Checkout Book\n3. Return Book\n4. List Movies\n5. Quit\nPlease enter your choice(1～5):\n";
+    public static final String MAIN_MENU = "1. List Books\n"
+            + "2. Checkout Book\n"
+            + "3. Return Book\n"
+            + "4. List Movies\n"
+            + "5. Check-out Movie\n"
+            + "6. Quit\n"
+            + "Please enter your choice(1～6):\n";
     private InputReader reader;
     private BibliotecaController bibliotecaController;
 
@@ -35,6 +41,7 @@ public class BibliotecaApp {
                 bibliotecaController.returnBook();
                 return true;
             case OptionStatus.List_Movies:
+                bibliotecaController.printMoviesList();
                 return true;
             case OptionStatus.Quit:
                 return false;
@@ -50,7 +57,8 @@ public class BibliotecaApp {
 
     public void init() {
         printWelcomeMessage();
-        while (proceedMainMenu()) { }
+        while (proceedMainMenu()) {
+        }
         printGoodbyeMessage();
     }
 
