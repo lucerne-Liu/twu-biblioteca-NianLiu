@@ -1,12 +1,15 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.command.InputReader;
+import com.twu.biblioteca.controller.BibliotecaController;
+
 public class BibliotecaApp {
     private InputReader reader;
-    private Library library;
+    private BibliotecaController bibliotecaController;
 
     public BibliotecaApp(InputReader reader) {
         this.reader = reader;
-        library = new Library();
+        bibliotecaController = new BibliotecaController(reader);
     }
 
     public void printWelcomeMessage() {
@@ -21,13 +24,13 @@ public class BibliotecaApp {
         printMainMenu();
         switch (reader.readOption()) {
             case OptionStatus.List_Books:
-                printBooksList();
+                bibliotecaController.printBooksList();
                 return true;
             case OptionStatus.Checkout_Book:
-                checkOutBook();
+                bibliotecaController.checkOutBook();
                 return true;
             case OptionStatus.Return_Book:
-                returnBook();
+                bibliotecaController.returnBook();
                 return true;
             case OptionStatus.Quit:
                 return false;
@@ -37,29 +40,8 @@ public class BibliotecaApp {
         }
     }
 
-    public void printBooksList() {
-        library.printBookList();
-    }
-
     public void printGoodbyeMessage() {
         System.out.print("Goodbye! See you next time!\n");
-    }
-
-    public void checkOutBook() {
-        while (true) {
-            System.out.println("Please input the book name you want to check out:");
-            if (library.checkOutBook(reader.readName())) {
-                System.out.println("Thank you! Enjoy the book");
-                break;
-            }else{
-                System.out.print("That book is not available.\n");
-            }
-        }
-    }
-
-    public void returnBook() {
-        System.out.println("Please input the book name you want to return:");
-        System.out.print(library.returnBook(reader.readName()) ? "Thank you for returning the book.\n" : "That is not a valid book to return.\n");
     }
 
     public void init() {

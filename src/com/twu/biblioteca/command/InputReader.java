@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.command;
 
 import java.io.ByteArrayInputStream;
 import java.util.Scanner;

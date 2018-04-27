@@ -1,5 +1,6 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.command;
 
+import com.twu.biblioteca.command.InputReader;
 import org.junit.Before;
 import org.junit.Test;
 
