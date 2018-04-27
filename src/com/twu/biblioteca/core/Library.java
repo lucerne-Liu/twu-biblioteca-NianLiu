@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.core;
 
 
 import com.twu.biblioteca.model.Book;
@@ -23,7 +23,7 @@ public class Library {
 
     public void printBookList() {
         System.out.print(String.format("%-50s%-50s%-50s\n" + DIVIDER, "Name", "Author", "Year Published"));
-        bookList.stream().filter(book -> book.getRentedStatus() == false).forEach(item -> System.out.print(item.toString()));
+        bookList.stream().filter(book -> !book.getRentedStatus()).forEach(item -> System.out.print(item.toString()));
     }
 
     public boolean changeBookRentStatus(String name, boolean isRent) {

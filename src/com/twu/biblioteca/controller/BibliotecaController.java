@@ -1,15 +1,18 @@
 package com.twu.biblioteca.controller;
 
-import com.twu.biblioteca.Library;
+import com.twu.biblioteca.core.Library;
 import com.twu.biblioteca.command.InputReader;
+import com.twu.biblioteca.core.VideoStore;
 
 public class BibliotecaController {
     private InputReader reader;
     private Library library;
+    private VideoStore videoStore;
 
     public BibliotecaController(InputReader reader) {
         this.reader = reader;
         library = new Library();
+        videoStore = new VideoStore();
     }
 
     public void printBooksList() {
@@ -31,5 +34,13 @@ public class BibliotecaController {
     public void returnBook() {
         System.out.println("Please input the book name you want to return:");
         System.out.print(library.returnBook(reader.readName()) ? "Thank you for returning the book.\n" : "That is not a valid book to return.\n");
+    }
+
+    public void printMoviesList() {
+        videoStore.printMoviesList();
+    }
+
+    public static void main(String[] args) {
+        new BibliotecaController(new InputReader()).printMoviesList();
     }
 }

@@ -90,8 +90,13 @@ public class BibliotecaControllerTest {
     @Test
     public void should_print_movies_list() {
         bibliotecaController.printMoviesList();
-        assertThat(systemOut()).isEqualTo("name|year|director|rating\n"
-                + "Avengers: Infinity War|2018|Anthony Russo, Joe Russo|9.2\n");
+        assertThat(systemOut()).isEqualTo("Name                          Year                          Director                      Movie Rating                  \n" +
+                "=======================================================================================================\n" +
+                "Avengers: Infinity War        2018                          Anthony Russo, Joe Russo      9.2                           \n" +
+                "Kings                         2017                          Deniz Gamze Ergüven           4.9                           \n" +
+                "Disobedience                  2017                          Sebastián Lelioo              6.4                           \n" +
+                "Love & Bananas                2018                          Ashley Bell                   unrated                       \n" +
+                "=======================================================================================================\n");
     }
 
     private String systemOut() {
