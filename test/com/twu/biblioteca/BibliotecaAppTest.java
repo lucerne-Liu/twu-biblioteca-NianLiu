@@ -256,6 +256,14 @@ public class BibliotecaAppTest {
         assertThat(systemOut().contains("Please input the book name you want to check out:")).isFalse();
     }
 
+    @Test
+    public void should_not_return_books_when_not_login(){
+        when(reader.readOption()).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains("Please login first!")).isTrue();
+        assertThat(systemOut().contains("Please input the book name you want to return:")).isFalse();
+    }
+
     private String systemOut() {
         return outputContent.toString();
     }
