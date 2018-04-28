@@ -15,11 +15,11 @@ public class BibliotecaApp {
             + "7. Quit\n"
             + "Please enter your choice(1～7):\n";
     private static final String ACCOUNT_MENU_WITHOUT_LOGIN = "1. Login\n"
-            + "2. Back to Main Menu\n"
+            + "2.Press Any Other key to Back to Main Menu\n"
             + "Please enter your choice(1～2):\n";
     private static final String ACCOUNT_MENU = "1. Login\n"
-            + "2. User information\n"
-            + "3. Back to Main Menu\n"
+            + "2. User Information\n"
+            + "3. Press Any Other key to Back to Main Menu\n"
             + "Please enter your choice(1～3):\n";
     private InputReader reader;
     private BibliotecaController bibliotecaController;
@@ -38,7 +38,7 @@ public class BibliotecaApp {
     }
 
     private void printUserMenu() {
-        if (bibliotecaController.checkLoginStatus()){
+        if (isLoggedIn()){
             System.out.print(ACCOUNT_MENU);
         }else {
             System.out.print(ACCOUNT_MENU_WITHOUT_LOGIN);
@@ -55,12 +55,11 @@ public class BibliotecaApp {
             String options = reader.readOption();
             if (options.equals(UserAccountMenuOptionStatus.LOG_IN)) {
                 bibliotecaController.logIn();
-            }else if (bibliotecaController.checkLoginStatus() && options.equals(UserAccountMenuOptionStatus.USER_INFORMATION)) {
+            }else if (isLoggedIn() && options.equals(UserAccountMenuOptionStatus.USER_INFORMATION)) {
 
-            }  else if (options.equals(UserAccountMenuOptionStatus.BACK_TO_MAIN_MENU)) {
+            }  else {
+                System.out.println("Back to the Main Menu.");
                 break;
-            } else {
-                printOptionWrongMessage();
             }
         }
     }
@@ -103,6 +102,10 @@ public class BibliotecaApp {
         while (proceedMainMenu()) {
         }
         printGoodbyeMessage();
+    }
+
+    private boolean isLoggedIn() {
+        return bibliotecaController.checkLoginStatus();
     }
 
 }

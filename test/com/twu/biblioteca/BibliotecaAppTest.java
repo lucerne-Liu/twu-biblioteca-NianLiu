@@ -35,11 +35,11 @@ public class BibliotecaAppTest {
             + "7. Quit\n"
             + "Please enter your choice(1～7):\n";
     private static final String ACCOUNT_MENU_WITHOUT_LOGIN = "1. Login\n"
-            + "2. Back to Main Menu\n"
+            + "2.Press Any Other key to Back to Main Menu\n"
             + "Please enter your choice(1～2):\n";
     private static final String ACCOUNT_MENU= "1. Login\n"
-            + "2. User information\n"
-            + "3. Back to Main Menu\n"
+            + "2. User Information\n"
+            + "3. Press Any Other key to Back to Main Menu\n"
             + "Please enter your choice(1～3):\n";
     private static final String EXIST_BOOK_NAME = "Head First Java";
     private static final String ANOTHER_EXIST_BOOK_NAME = "Head First JavaScript";
@@ -275,6 +275,13 @@ public class BibliotecaAppTest {
         when(reader.readString()).thenReturn(EXIST_USER_NUMBER).thenReturn(EXIST_USER_PWD);
         bibliotecaApp.init();
         assertThat(systemOut().contains(ACCOUNT_MENU)).isTrue();
+    }
+
+    @Test
+    public void should_back_to_main_menu_when_press_other_keys_in_user_account_menu(){
+        when(reader.readOption()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains("Back to the Main Menu.")).isTrue();
     }
 
     private String systemOut() {
