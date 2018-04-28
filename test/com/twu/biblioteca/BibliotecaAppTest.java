@@ -263,6 +263,17 @@ public class BibliotecaAppTest {
         assertThat(systemOut().contains("Please login first!")).isTrue();
         assertThat(systemOut().contains("Please input the book name you want to return:")).isFalse();
     }
+    
+    @Test
+    public void should_(){
+        //given
+        
+        
+        
+        //when
+        
+        //then
+    }
 
     private String systemOut() {
         return outputContent.toString();

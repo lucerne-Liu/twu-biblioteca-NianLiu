@@ -16,7 +16,7 @@ public class UserController {
             add(new User("111-3333", "qqq", "Tiffany", "333@foxmail.com", "156989899"));
         }
     };
-    private boolean isLogin;
+    private boolean isLogin = false;
     private String loginUserNumber;
     private InputReader reader;
     private LoginValidator validator = new LoginValidator();
@@ -29,11 +29,8 @@ public class UserController {
         return isLogin;
     }
 
-    private void setLoginStatus(boolean login) {
-        isLogin = login;
-    }
-
-    private void setLoginUserNumber(String loginUserNumber) {
+    private void setLoginStatus(boolean isLoggedIn, String loginUserNumber) {
+        this.isLogin = isLoggedIn;
         this.loginUserNumber = loginUserNumber;
     }
 
@@ -58,8 +55,7 @@ public class UserController {
         }
         System.out.print("Please enter your password:\n");
         if (validator.validateUser(libraryNumber, reader.readString())) {
-            setLoginStatus(true);
-            setLoginUserNumber(libraryNumber);
+            setLoginStatus(true,libraryNumber);
             return findUserNameByLibraryNumber(libraryNumber);
         } else {
             return "false";

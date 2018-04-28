@@ -1,6 +1,7 @@
 package com.twu.biblioteca.controller;
 
 import com.twu.biblioteca.command.InputReader;
+import com.twu.biblioteca.status.MainMenuOptionStatus;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -156,6 +157,12 @@ public class BibliotecaControllerTest {
         assertThat(systemOut().startsWith("Please enter your library number(xxx-xxxx):\n")).isTrue();
         assertThat(systemOut().endsWith("Login failed! Please check your library number and password.\n")).isTrue();
         verify(reader,times(2)).readString();
+    }
+    
+    @Test
+    public void should_prompt_message_when_check_out_or_return_book_without_login(){
+        bibliotecaController.proceedCommandIfLoggedIn(MainMenuOptionStatus.Checkout_Book);
+        assertThat(systemOut().startsWith("Please login first!")).isTrue();
     }
 
     private String systemOut() {
