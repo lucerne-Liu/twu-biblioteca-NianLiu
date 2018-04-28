@@ -46,21 +46,21 @@ public class BibliotecaControllerTest {
 
     @Test
     public void should_prompt_successful_msg_when_checked_out_book() {
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaController.checkOutBook();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
     }
 
     @Test
     public void should_prompt_successful_checked_out_msg_when_book_name_spelling_right_but_no_spaces() {
-        when(reader.readName()).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
+        when(reader.readString()).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
         bibliotecaController.checkOutBook();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
     }
 
     @Test
     public void should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list() {
-        when(reader.readName()).thenReturn(ABSENT_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readString()).thenReturn(ABSENT_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaController.checkOutBook();
         assertThat(systemOut().contains("That book is not available.\n"
                 + "Please input the book name you want to check out:")).isTrue();
@@ -68,7 +68,7 @@ public class BibliotecaControllerTest {
 
     @Test
     public void should_print_successful_return_message_when_book_in_the_library() {
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaController.checkOutBook();
         bibliotecaController.returnBook();
         assertThat(systemOut().endsWith("Thank you for returning the book.\n")).isTrue();
@@ -76,16 +76,16 @@ public class BibliotecaControllerTest {
 
     @Test
     public void should_print_successful_return_message_when_book_name_correct_but_no_spaces() {
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
         bibliotecaController.checkOutBook();
         bibliotecaController.returnBook();
         assertThat(systemOut().contains("Thank you for returning the book.\n")).isTrue();
-        verify(reader, times(2)).readName();
+        verify(reader, times(2)).readString();
     }
 
     @Test
     public void should_print_unsuccessful_return_message_when_book_name_wrong() {
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(ABSENT_BOOK_NAME);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME).thenReturn(ABSENT_BOOK_NAME);
         bibliotecaController.checkOutBook();
         bibliotecaController.returnBook();
         assertThat(systemOut().endsWith("That is not a valid book to return.\n")).isTrue();
@@ -105,7 +105,7 @@ public class BibliotecaControllerTest {
 
     @Test
     public void should_prompt_successful_msg_when_checked_out_movie() {
-        when(reader.readName()).thenReturn(EXIST_MOVIE_NAME);
+        when(reader.readString()).thenReturn(EXIST_MOVIE_NAME);
         bibliotecaController.checkOutMovie();
         assertThat(systemOut().startsWith("Please input the movie name you want to check out:")).isTrue();
         assertThat(systemOut().endsWith("Thank you! Enjoy the Movie.\n")).isTrue();
@@ -113,25 +113,31 @@ public class BibliotecaControllerTest {
 
     @Test
     public void should_prompt_successful_msg_when_checked_out_movie_name_with_no_spaces() {
-        when(reader.readName()).thenReturn(EXIST_MOVIE_NAME_WITH_NO_SPACES);
+        when(reader.readString()).thenReturn(EXIST_MOVIE_NAME_WITH_NO_SPACES);
         bibliotecaController.checkOutMovie();
         assertThat(systemOut().endsWith("Thank you! Enjoy the Movie.\n")).isTrue();
     }
 
     @Test
     public void should_prompt_unsuccessful_msg_when_checked_out_movie_name_not_exist() {
-        when(reader.readName()).thenReturn(ABSENT_MOVIE_NAME);
+        when(reader.readString()).thenReturn(ABSENT_MOVIE_NAME);
         bibliotecaController.checkOutMovie();
         assertThat(systemOut().endsWith("That Movie is not available.\n")).isTrue();
     }
 
     @Test
     public void should_prompt_successful_login_message_when_login_right(){
-        when(reader.readName()).thenReturn(EXIST_USER_NUMBER).thenReturn(EXIST_USER_PWD);
+        when(reader.readString()).thenReturn(EXIST_USER_NUMBER).thenReturn(EXIST_USER_PWD);
         bibliotecaController.logIn();
         assertThat(systemOut().startsWith("Please enter your library number(xxx-xxxx):\n")).isTrue();
         assertThat(systemOut().contains("Please enter your password:\n")).isTrue();
-        assertThat(systemOut().endsWith("That Movie is not available.\n")).isTrue();
+        assertThat(systemOut().endsWith("Login Successful! Now you can check-out and return books.\n")).isTrue();
+    }
+
+    @Test
+    public void should_prompt_message_when_login_library_number_in_wrong_format(){
+        when(reader.readString()).thenReturn("1112222");
+        bibliotecaController.logIn();
     }
 
     private String systemOut() {
