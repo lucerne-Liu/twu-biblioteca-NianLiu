@@ -242,13 +242,6 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void should_print_user_account_menu_when_choose_user_account_option() {
-        when(reader.readOption()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
-        bibliotecaApp.init();
-        assertThat(systemOut().contains(ACCOUNT_MENU)).isTrue();
-    }
-
-    @Test
     public void should_not_check_out_book_when_not_login(){
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(QUIT_OPTION);
         bibliotecaApp.init();
@@ -265,14 +258,10 @@ public class BibliotecaAppTest {
     }
     
     @Test
-    public void should_(){
-        //given
-        
-        
-        
-        //when
-        
-        //then
+    public void should_not_show_user_information_option_when_not_login(){
+        when(reader.readOption()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains(ACCOUNT_MENU)).isTrue();
     }
 
     private String systemOut() {

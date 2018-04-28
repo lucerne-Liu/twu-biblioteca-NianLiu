@@ -163,6 +163,8 @@ public class BibliotecaControllerTest {
     public void should_prompt_message_when_check_out_or_return_book_without_login(){
         bibliotecaController.proceedCommandIfLoggedIn(MainMenuOptionStatus.Checkout_Book);
         assertThat(systemOut().startsWith("Please login first!")).isTrue();
+        bibliotecaController.proceedCommandIfLoggedIn(MainMenuOptionStatus.Return_Book);
+        assertThat(systemOut().startsWith("Please login first!")).isTrue();
     }
 
     private String systemOut() {
