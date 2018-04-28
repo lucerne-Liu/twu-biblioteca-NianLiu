@@ -56,7 +56,7 @@ public class BibliotecaApp {
             if (options.equals(UserAccountMenuOptionStatus.LOG_IN)) {
                 bibliotecaController.logIn();
             }else if (isLoggedIn() && options.equals(UserAccountMenuOptionStatus.USER_INFORMATION)) {
-
+                bibliotecaController.printUserInformation();
             }  else {
                 System.out.println("Back to the Main Menu.");
                 break;

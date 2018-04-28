@@ -60,6 +60,10 @@ public class BibliotecaController {
         }
     }
 
+    public void printUserInformation(){
+        userController.printUserInformationByUserLibraryNumber();
+    }
+
     public boolean checkLoginStatus(){
         return userController.checkLoginStatus();
     }

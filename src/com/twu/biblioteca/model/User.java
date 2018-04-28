@@ -28,8 +28,14 @@ public class User {
     }
 
     @Override
+    public String toString() {
+        return String.format("name: %s\nemail address: %s\nphone number: %s\n", name, email, phoneNumber);
+    }
+
+    @Override
     public boolean equals(Object object) {
         User anotherUser = (User) object;
         return getLibraryNumber().equals(anotherUser.getLibraryNumber()) && getPassword().equals(anotherUser.getPassword());
     }
+
 }

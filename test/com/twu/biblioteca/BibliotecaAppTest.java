@@ -287,8 +287,13 @@ public class BibliotecaAppTest {
     @Test
     public void should_print_user_information_when_choose_user_information_option(){
         when(reader.readOption()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(LOGIN_OPTION).thenReturn(USER_INFORMATION_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readString()).thenReturn(EXIST_USER_NUMBER).thenReturn(EXIST_USER_PWD);
         bibliotecaApp.init();
-        assertThat(systemOut().contains("name, email address and phone number")).isTrue();
+        assertThat(systemOut().contains("=================================================\n" +
+                "name: Kate\n" +
+                "email address: 111@foxmail.com\n" +
+                "phone number: 111\n" +
+                "=================================================\n")).isTrue();
     }
 
     private String systemOut() {

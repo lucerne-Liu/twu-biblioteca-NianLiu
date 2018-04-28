@@ -167,6 +167,18 @@ public class BibliotecaControllerTest {
         assertThat(systemOut().startsWith("Please login first!")).isTrue();
     }
 
+    @Test
+    public void should_print_user_information_of_the_logged_in_user(){
+        when(reader.readString()).thenReturn(EXIST_USER_NUMBER).thenReturn(EXIST_USER_PWD);
+        bibliotecaController.logIn();
+        bibliotecaController.printUserInformation();
+        assertThat(systemOut().endsWith("=================================================\n" +
+                "name: Kate\n" +
+                "email address: 111@foxmail.com\n" +
+                "phone number: 111\n" +
+                "=================================================\n")).isTrue();
+    }
+
     private String systemOut() {
         return outputContent.toString();
     }

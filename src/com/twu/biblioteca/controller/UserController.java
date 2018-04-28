@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class UserController {
+    private static final String DIVIDER = "=================================================\n";
     public static List<User> userList = new ArrayList<User>() {
         {
             add(new User("111-1111", "123456", "Kate", "111@foxmail.com", "111"));
@@ -38,7 +39,7 @@ public class UserController {
         return loginUserNumber;
     }
 
-    public String findUserNameByLibraryNumber(String libraryNumber) {
+    private String findUserNameByLibraryNumber(String libraryNumber) {
         return userList.stream().filter(user -> user.getLibraryNumber().equals(libraryNumber)).map(User::getName).collect(Collectors.joining());
     }
 
@@ -60,8 +61,11 @@ public class UserController {
         } else {
             return "false";
         }
+    }
 
-
-
+    public void printUserInformationByUserLibraryNumber(){
+        System.out.print(DIVIDER);
+        userList.stream().filter(user -> user.getLibraryNumber().equals(getLoginUserNumber())).forEach(user -> System.out.print(user.toString()));
+        System.out.print(DIVIDER);
     }
 }
