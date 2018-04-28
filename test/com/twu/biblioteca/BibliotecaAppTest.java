@@ -106,7 +106,7 @@ public class BibliotecaAppTest {
     @Test
     public void should_not_show_checked_out_books_after_check_out() {
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains(
                 "Name                                              Author                                            Year Published                                    \n" +
@@ -120,7 +120,7 @@ public class BibliotecaAppTest {
     @Test
     public void should_prompt_successful_msg_when_checked_out() {
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you! Enjoy the book")).isTrue();
         verify(reader, times(2)).readOption();
@@ -129,7 +129,7 @@ public class BibliotecaAppTest {
     @Test
     public void should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list() {
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(ABSENT_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readString()).thenReturn(ABSENT_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That book is not available.\n"
                 + "Please input the book name you want to check out:")).isTrue();
@@ -138,17 +138,17 @@ public class BibliotecaAppTest {
     @Test
     public void should_prompt_unsuccessful_message_when_input_book_already_checked_out() {
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME).thenReturn(ANOTHER_EXIST_BOOK_NAME);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME).thenReturn(ANOTHER_EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That book is not available.\n"
                 + "Please input the book name you want to check out:")).isTrue();
-        verify(reader, times(3)).readName();
+        verify(reader, times(3)).readString();
     }
 
     @Test
     public void should_show_returned_book_in_list_when_returned() {
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains(
                 "Name                                              Author                                            Year Published                                    \n" +
@@ -158,13 +158,13 @@ public class BibliotecaAppTest {
                         "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
                         "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n")).isTrue();;
-        verify(reader, times(2)).readName();
+        verify(reader, times(2)).readString();
     }
 
     @Test
     public void should_print_successful_return_message_when_book_name_correct_but_no_spaces(){
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you for returning the book.\n")).isTrue();
         verify(reader, times(3)).readOption();
@@ -173,7 +173,7 @@ public class BibliotecaAppTest {
     @Test
     public void should_print_unsuccessful_return_message_when_book_name_wrong(){
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME).thenReturn(ABSENT_BOOK_NAME);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME).thenReturn(ABSENT_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That is not a valid book to return.\n")).isTrue();
         assertThat(systemOut().contains(
@@ -190,7 +190,7 @@ public class BibliotecaAppTest {
     @Test
     public void should_print_unsuccessful_return_message_when_book_name_right_but_not_rent_from_this_library(){
         when(reader.readOption()).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_BOOK_NAME);
+        when(reader.readString()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That is not a valid book to return.\n")).isTrue();
     }
@@ -211,7 +211,7 @@ public class BibliotecaAppTest {
     @Test
     public void should_not_show_checked_out_movies_in_movie_list() {
         when(reader.readOption()).thenReturn(CHECK_OUT_MOVIE_OPTION).thenReturn(MOVIE_LIST_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_MOVIE_NAME);
+        when(reader.readString()).thenReturn(EXIST_MOVIE_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Thank you! Enjoy the Movie.\n")).isTrue();
         assertThat(systemOut().contains("Name                          Year                          Director                      Movie Rating                  \n" +
@@ -225,10 +225,10 @@ public class BibliotecaAppTest {
     @Test
     public void should_prompt_unsuccessful_message_when_input_movie_already_checked_out() {
         when(reader.readOption()).thenReturn(CHECK_OUT_MOVIE_OPTION).thenReturn(CHECK_OUT_MOVIE_OPTION).thenReturn(QUIT_OPTION);
-        when(reader.readName()).thenReturn(EXIST_MOVIE_NAME).thenReturn(EXIST_MOVIE_NAME);
+        when(reader.readString()).thenReturn(EXIST_MOVIE_NAME).thenReturn(EXIST_MOVIE_NAME);
         bibliotecaApp.init();
         assertThat(systemOut().contains("That Movie is not available.\n")).isTrue();
-        verify(reader, times(2)).readName();
+        verify(reader, times(2)).readString();
     }
 
     private String systemOut() {

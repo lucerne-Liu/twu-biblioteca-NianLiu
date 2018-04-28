@@ -17,7 +17,7 @@ public class InputReader {
         return pattern.matcher(inputString).matches() ? inputString : "invalid";
     }
 
-    public String readName() {
+    public String readString() {
         scanner.useDelimiter("\n");
         String inputString = scanner.next().trim();
         return inputString;

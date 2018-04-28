@@ -1,6 +1,5 @@
 package com.twu.biblioteca.command;
 
-import com.twu.biblioteca.command.InputReader;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -46,6 +45,6 @@ public class InputReaderTest {
     @Test
     public void should_return_book_name_when_input() throws NoSuchFieldException, IllegalAccessException {
         setInputStream(" Head First Java ");
-        assertThat(reader.readName()).isEqualTo("Head First Java");
+        assertThat(reader.readString()).isEqualTo("Head First Java");
     }
 }
