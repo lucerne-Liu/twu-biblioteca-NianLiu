@@ -26,4 +26,9 @@ public class LoginValidatorTest {
         assertFalse(validator.validateLibraryNumber("11111-11"));
     }
 
+    @Test
+    public void should_return_true_when_user_number_and_password_all_correct(){
+        assertTrue(validator.validateUser("111-1111", "123456"));
+    }
+
 }

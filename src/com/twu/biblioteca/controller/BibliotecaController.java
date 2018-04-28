@@ -50,9 +50,16 @@ public class BibliotecaController {
     }
 
     public void logIn() {
-        System.out.println("Please enter your library number(xxx-xxxx):\n");
-        String libraryNumber = reader.readString();
-        validator.validateLibraryNumber(libraryNumber);
+        String libraryNumber;
+        while (true) {
+            System.out.println("Please enter your library number(xxx-xxxx):\n");
+            libraryNumber = reader.readString();
+            if (validator.validateLibraryNumber(libraryNumber)) {
+                break;
+            }else{
+                System.out.print("The library number format is wrong!\n");
+            }
+        }
         System.out.println("Please enter your password:\n");
         validator.validateUser(libraryNumber,reader.readString());
         System.out.print("Login Successful! Now you can check-out and return books.\n");
