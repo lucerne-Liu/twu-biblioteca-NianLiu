@@ -65,10 +65,10 @@ public class BibliotecaApp {
                 bibliotecaController.printBooksList();
                 return true;
             case MainMenuOptionStatus.Checkout_Book:
-                bibliotecaController.checkOutBook();
+                bibliotecaController.proceedCommandIfLoggedIn(MainMenuOptionStatus.Checkout_Book);
                 return true;
             case MainMenuOptionStatus.Return_Book:
-                bibliotecaController.returnBook();
+                bibliotecaController.proceedCommandIfLoggedIn(MainMenuOptionStatus.Return_Book);
                 return true;
             case MainMenuOptionStatus.List_Movies:
                 bibliotecaController.printMoviesList();

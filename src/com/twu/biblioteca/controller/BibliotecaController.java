@@ -3,6 +3,7 @@ package com.twu.biblioteca.controller;
 import com.twu.biblioteca.core.Library;
 import com.twu.biblioteca.command.InputReader;
 import com.twu.biblioteca.core.VideoStore;
+import com.twu.biblioteca.status.MainMenuOptionStatus;
 
 public class BibliotecaController {
     private InputReader reader;
@@ -56,6 +57,18 @@ public class BibliotecaController {
         } else {
             System.out.print("Login Successful!\n");
             System.out.print(String.format("Welcome %s! Now you can check-out and return books.\n", loginMsg));
+        }
+    }
+
+    public void proceedCommandIfLoggedIn(String command){
+        if (userController.checkLoginStatus()){
+            if (command.equals(MainMenuOptionStatus.Checkout_Book)){
+                checkOutBook();
+            } else if (command.equals(MainMenuOptionStatus.Return_Book)) {
+                returnBook();
+            }
+        }else {
+            System.out.println("Please login first!");
         }
     }
 
