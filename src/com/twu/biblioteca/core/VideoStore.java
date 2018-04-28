@@ -27,7 +27,7 @@ public class VideoStore implements RentImplement {
     }
 
     @Override
-    public boolean checkOutMedia(String name) {
+    public boolean checkOut(String name, String rentedBy) {
         Movie checkOutMovie = new Movie(name, "", "");
         Boolean hasThisMovie = moviesList.stream().anyMatch(item -> item.equals(checkOutMovie) && !item.getRentedStatus());
         if (hasThisMovie) {

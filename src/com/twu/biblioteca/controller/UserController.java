@@ -37,6 +37,10 @@ public class UserController {
         this.loginUserNumber = loginUserNumber;
     }
 
+    public String getLoginUserNumber() {
+        return loginUserNumber;
+    }
+
     public String findUserNameByLibraryNumber(String libraryNumber) {
         return userList.stream().filter(user -> user.getLibraryNumber().equals(libraryNumber)).map(User::getName).collect(Collectors.joining());
     }

@@ -5,6 +5,7 @@ import com.twu.biblioteca.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Library implements RentImplement {
     private static final String DIVIDER = "============================================================"
@@ -27,22 +28,30 @@ public class Library implements RentImplement {
         bookList.stream().filter(book -> !book.getRentedStatus()).forEach(item -> System.out.print(item.toString()));
     }
 
-    public boolean changeBookRentStatus(String name, boolean isRent) {
+    public boolean changeBookRentStatus(String name, boolean isRent, String rentedBy) {
         Book checkOutBook = new Book(name, "", 0);
         Boolean hasThisBook = bookList.stream().anyMatch(item -> item.equals(checkOutBook) && item.getRentedStatus() == !isRent);
         if (hasThisBook) {
-            bookList.stream().filter(book -> book.equals(checkOutBook)).forEach(book -> book.setRented(isRent));
+            bookList.stream().filter(book -> book.equals(checkOutBook)).forEach(book -> {
+                book.setRented(isRent);
+                book.setRentedBy(rentedBy);
+            });
         }
         return hasThisBook;
     }
 
+    public String findRentedUserByBookName(String bookName){
+        Book checkOutBook = new Book(bookName, "", 0);
+        return bookList.stream().filter(book -> book.equals(checkOutBook)).map(Book::getRentedBy).collect(Collectors.joining());
+    }
+
     @Override
-    public boolean checkOutMedia(String name) {
-        return changeBookRentStatus(name, true);
+    public boolean checkOut(String name, String rentedBy) {
+        return changeBookRentStatus(name, true, rentedBy);
     }
 
     @Override
     public boolean returnMedia(String name) {
-        return changeBookRentStatus(name, false);
+        return changeBookRentStatus(name, false, "");
     }
 }

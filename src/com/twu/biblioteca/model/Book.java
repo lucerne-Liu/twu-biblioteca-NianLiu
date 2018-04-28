@@ -5,6 +5,7 @@ public class Book {
     private String author;
     private int publishedYear;
     private boolean isRented;
+    private String rentedBy;
 
     public Book(String name, String author, int publishedYear) {
         this.name = name;
@@ -23,6 +24,14 @@ public class Book {
 
     public boolean getRentedStatus() {
         return isRented;
+    }
+
+    public void setRentedBy(String rentedBy) {
+        this.rentedBy = rentedBy;
+    }
+
+    public String getRentedBy() {
+        return rentedBy;
     }
 
     private String removeSpacesInName(String name) {

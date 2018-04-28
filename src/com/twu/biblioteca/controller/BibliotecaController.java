@@ -22,7 +22,7 @@ public class BibliotecaController {
     public void checkOutBook() {
         while (true) {
             System.out.println("Please input the book name you want to check out:");
-            if (library.checkOutMedia(reader.readString())) {
+            if (library.checkOut(reader.readString(), userController.getLoginUserNumber())) {
                 System.out.println("Thank you! Enjoy the book");
                 break;
             } else {
@@ -42,7 +42,7 @@ public class BibliotecaController {
 
     public void checkOutMovie() {
         System.out.println("Please input the movie name you want to check out:");
-        if (videoStore.checkOutMedia(reader.readString())) {
+        if (videoStore.checkOut(reader.readString(), userController.getLoginUserNumber())) {
             System.out.print("Thank you! Enjoy the Movie.\n");
         } else {
             System.out.print("That Movie is not available.\n");

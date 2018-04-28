@@ -15,7 +15,7 @@ public class BibliotecaApp {
             + "7. Quit\n"
             + "Please enter your choice(1～7):\n";
     private static final String ACCOUNT_MENU = "1. Login\n"
-            + "2. Quit\n"
+            + "2. Back to Main Menu\n"
             + "Please enter your choice(1～2):\n";
     private InputReader reader;
     private BibliotecaController bibliotecaController;

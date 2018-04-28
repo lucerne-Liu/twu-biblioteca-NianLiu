@@ -34,7 +34,7 @@ public class BibliotecaAppTest {
             + "7. Quit\n"
             + "Please enter your choice(1～7):\n";
     private static final String ACCOUNT_MENU = "1. Login\n"
-            + "2. Quit\n"
+            + "2. Back to Main Menu\n"
             + "Please enter your choice(1～2):\n";
     private static final String EXIST_BOOK_NAME = "Head First Java";
     private static final String ANOTHER_EXIST_BOOK_NAME = "Head First JavaScript";
@@ -63,13 +63,6 @@ public class BibliotecaAppTest {
     public void should_print_main_menu_after_welcome_message() {
         bibliotecaApp.printMainMenu();
         assertThat(systemOut().endsWith(MAIN_MENU)).isTrue();
-    }
-
-    @Test
-    public void should_print_user_account_menu_when_choose_user_account_option() {
-        when(reader.readString()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
-        bibliotecaApp.init();
-        assertThat(systemOut().contains(ACCOUNT_MENU)).isTrue();
     }
 
     @Test
@@ -244,6 +237,13 @@ public class BibliotecaAppTest {
         bibliotecaApp.init();
         assertThat(systemOut().contains("That Movie is not available.\n")).isTrue();
         verify(reader, times(2)).readString();
+    }
+
+    @Test
+    public void should_print_user_account_menu_when_choose_user_account_option() {
+        when(reader.readOption()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains(ACCOUNT_MENU)).isTrue();
     }
 
     private String systemOut() {
