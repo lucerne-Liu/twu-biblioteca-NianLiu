@@ -3,16 +3,16 @@ package com.twu.biblioteca.controller;
 import com.twu.biblioteca.core.Library;
 import com.twu.biblioteca.command.InputReader;
 import com.twu.biblioteca.core.VideoStore;
-import com.twu.biblioteca.validator.LoginValidator;
 
 public class BibliotecaController {
     private InputReader reader;
     private Library library = new Library();
     private VideoStore videoStore = new VideoStore();
-    private LoginValidator validator = new LoginValidator();
+    private UserController userController;
 
     public BibliotecaController(InputReader reader) {
         this.reader = reader;
+        userController = new UserController(reader);
     }
 
     public void printBooksList() {
@@ -50,18 +50,7 @@ public class BibliotecaController {
     }
 
     public void logIn() {
-        String libraryNumber;
-        while (true) {
-            System.out.println("Please enter your library number(xxx-xxxx):\n");
-            libraryNumber = reader.readString();
-            if (validator.validateLibraryNumber(libraryNumber)) {
-                break;
-            }else{
-                System.out.print("The library number format is wrong!\n");
-            }
-        }
-        System.out.println("Please enter your password:\n");
-        validator.validateUser(libraryNumber,reader.readString());
-        System.out.print("Login Successful! Now you can check-out and return books.\n");
+        userController.logIn();
     }
+
 }

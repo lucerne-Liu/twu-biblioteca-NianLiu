@@ -1,5 +1,8 @@
 package com.twu.biblioteca.validator;
 
+import com.twu.biblioteca.controller.UserController;
+import com.twu.biblioteca.model.User;
+
 import java.util.Arrays;
 
 public class LoginValidator {
@@ -11,6 +14,8 @@ public class LoginValidator {
                 .filter(item -> !item.equals("-")).map(Integer::parseInt).count() == NUM_COUNT;
     }
 
-    public void validateUser(String libraryNumber, String password) {
+    public boolean validateUser(String libraryNumber, String password) {
+        User inputUser = new User(libraryNumber,password,"","","");
+        return UserController.userList.stream().anyMatch(user -> user.equals(inputUser));
     }
 }

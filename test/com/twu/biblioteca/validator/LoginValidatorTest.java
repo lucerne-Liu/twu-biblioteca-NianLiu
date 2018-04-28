@@ -29,6 +29,13 @@ public class LoginValidatorTest {
     @Test
     public void should_return_true_when_user_number_and_password_all_correct(){
         assertTrue(validator.validateUser("111-1111", "123456"));
+        assertTrue(validator.validateUser("222-1111", "222"));
+    }
+
+    @Test
+    public void should_return_false_when_user_account_no_exist(){
+        assertFalse(validator.validateUser("111-1111", "123"));
+        assertFalse(validator.validateUser("222-1111", "123456"));
     }
 
 }
