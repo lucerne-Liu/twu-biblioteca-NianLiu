@@ -246,6 +246,14 @@ public class BibliotecaAppTest {
         assertThat(systemOut().contains(ACCOUNT_MENU)).isTrue();
     }
 
+    @Test
+    public void should_not_check_out_book_when_not_login(){
+        when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains("Please login first!")).isTrue();
+        assertThat(systemOut().contains("Please input the book name you want to check out:")).isFalse();
+    }
+
     private String systemOut() {
         return outputContent.toString();
     }
