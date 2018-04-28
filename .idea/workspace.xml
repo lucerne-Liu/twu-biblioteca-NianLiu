@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/status/UserAccountMenuOptionStatus.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/status/UserAccountMenuOptionStatus.java" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -75,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="174">
-              <caret line="282" column="29" lean-forward="true" selection-start-line="282" selection-start-column="29" selection-end-line="282" selection-end-column="29" />
+              <caret line="289" column="29" lean-forward="true" selection-start-line="289" selection-start-column="29" selection-end-line="289" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -187,8 +185,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="222" />
-    <option name="y" value="294" />
+    <option name="x" value="275" />
+    <option name="y" value="288" />
     <option name="width" value="1529" />
     <option name="height" value="880" />
   </component>
@@ -348,7 +346,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BibliotecaAppTest.should_back_to_main_menu_when_press_other_keys_in_user_account_menu">
+  <component name="RunManager" selected="JUnit.BibliotecaAppTest.should_print_user_information_when_choose_user_information_option">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -459,7 +457,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="BibliotecaAppTest.should_show_user_information_option_when_logged_in" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecaAppTest.should_print_user_information_when_choose_user_information_option" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.twu.biblioteca.*" />
@@ -471,7 +469,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="should_show_user_information_option_when_logged_in" />
+      <option name="METHOD_NAME" value="should_print_user_information_when_choose_user_information_option" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -547,17 +545,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_show_user_information_option_when_logged_in" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_back_to_main_menu_when_logged_in_and_press_other_keys" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_back_to_main_menu_when_press_other_keys_in_user_account_menu" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_back_to_main_menu_when_logged_in_and_press_other_keys" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_back_to_main_menu_when_press_other_keys_in_user_account_menu" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_user_information_when_choose_user_information_option" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_back_to_main_menu_when_press_other_keys_in_user_account_menu" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_back_to_main_menu_when_logged_in_and_press_other_keys" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_show_user_information_option_when_logged_in" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_user_information_when_choose_user_information_option" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_back_to_main_menu_when_press_other_keys_in_user_account_menu" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_back_to_main_menu_when_logged_in_and_press_other_keys" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
       </list>
     </recent_temporary>
   </component>
@@ -578,14 +576,7 @@
       <workItem from="1524751337066" duration="18142000" />
       <workItem from="1524810631256" duration="3334000" />
       <workItem from="1524835602224" duration="14689000" />
-      <workItem from="1524901475223" duration="15064000" />
-    </task>
-    <task id="LOCAL-00017" summary="test:add test &quot;should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list&quot;">
-      <created>1524760845027</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1524760845027</updated>
+      <workItem from="1524901475223" duration="15298000" />
     </task>
     <task id="LOCAL-00018" summary="feat:implement test &quot;should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list&quot;">
       <created>1524761803415</created>
@@ -923,7 +914,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524915681284</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="test:add test &quot;should_back_to_main_menu_when_press_other_keys_in_user_account_menu&quot;">
+      <created>1524916642291</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1524916642291</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -942,6 +940,9 @@
     <history-entry file="BibliotecaAppTest_should_not_show_user_information_option_when_not_login - 2018.04.28 at 19h 28m 27s.xml">
       <configuration name="BibliotecaAppTest.should_not_show_user_information_option_when_not_login" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BibliotecaAppTest_should_print_user_informations_when_choose_user_information_option - 2018.04.28 at 20h 00m 45s.xml">
+      <configuration name="BibliotecaAppTest.should_print_user_informations_when_choose_user_information_option" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="BibliotecaAppTest_should_show_user_information_option_when_logged_in - 2018.04.28 at 19h 32m 54s.xml">
       <configuration name="BibliotecaAppTest.should_show_user_information_option_when_logged_in" configurationId="JUnit" />
     </history-entry>
@@ -951,18 +952,15 @@
     <history-entry file="BibliotecaAppTest_should_show_user_information_option_when_logged_in - 2018.04.28 at 19h 41m 08s.xml">
       <configuration name="BibliotecaAppTest.should_show_user_information_option_when_logged_in" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaControllerTest_should_prompt_message_when_check_out_or_return_book_without_login - 2018.04.28 at 19h 25m 42s.xml">
-      <configuration name="BibliotecaControllerTest.should_prompt_message_when_check_out_or_return_book_without_login" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BibliotecaControllerTest_should_prompt_message_when_check_out_or_return_book_without_login - 2018.04.28 at 19h 26m 13s.xml">
       <configuration name="BibliotecaControllerTest.should_prompt_message_when_check_out_or_return_book_without_login" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61926000" />
+    <option name="totallyTimeSpent" value="62160000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="222" y="294" width="1529" height="880" extended-state="0" />
+    <frame x="275" y="288" width="1529" height="880" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -974,7 +972,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3906911" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3906911" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21156558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1034,7 +1032,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test:add test &quot;should_prompt_successful_msg_when_checked_out_movie&quot;" />
     <MESSAGE value="test:add test &quot;should_prompt_successful_msg_when_checked_out_movie_name_with_no_spaces&quot;" />
     <MESSAGE value="test:add test &quot;should_prompt_unsuccessful_msg_when_checked_out_movie_name_not_exist&quot;" />
     <MESSAGE value="test:add test &quot;should_print_movie_list_when_choose_List_Movies_option&quot;" />
@@ -1059,7 +1056,8 @@
     <MESSAGE value="test:add test &quot;should_not_show_user_information_option_when_not_login&quot;" />
     <MESSAGE value="test:add test &quot;should_show_user_information_option_when_logged_in&quot;" />
     <MESSAGE value="feat:implement test &quot;should_show_user_information_option_when_logged_in&quot; and refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:implement test &quot;should_show_user_information_option_when_logged_in&quot; and refactor" />
+    <MESSAGE value="test:add test &quot;should_back_to_main_menu_when_press_other_keys_in_user_account_menu&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_back_to_main_menu_when_press_other_keys_in_user_account_menu&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1465,7 +1463,7 @@
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
-          <caret line="282" column="29" lean-forward="true" selection-start-line="282" selection-start-column="29" selection-end-line="282" selection-end-column="29" />
+          <caret line="289" column="29" lean-forward="true" selection-start-line="289" selection-start-column="29" selection-end-line="289" selection-end-column="29" />
           <folding />
         </state>
       </provider>

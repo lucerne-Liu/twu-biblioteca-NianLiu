@@ -284,6 +284,13 @@ public class BibliotecaAppTest {
         assertThat(systemOut().contains("Back to the Main Menu.")).isTrue();
     }
 
+    @Test
+    public void should_print_user_information_when_choose_user_information_option(){
+        when(reader.readOption()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(LOGIN_OPTION).thenReturn(USER_INFORMATION_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains("name, email address and phone number")).isTrue();
+    }
+
     private String systemOut() {
         return outputContent.toString();
     }
