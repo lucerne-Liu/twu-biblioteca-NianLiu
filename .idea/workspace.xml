@@ -4,11 +4,8 @@
     <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/command/InputReader.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/command/InputReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/controller/UserController.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/model/User.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/model/User.java" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/status/OptionStatus.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/status/MainMenuOptionStatus.java" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,9 +29,14 @@
       <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-567">
-              <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="207">
+              <caret line="18" column="49" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="49" />
+              <folding>
+                <element signature="e#1278#1279#0" expanded="true" />
+                <element signature="e#1359#1360#0" expanded="true" />
+                <element signature="e#2947#2948#0" expanded="true" />
+                <element signature="e#3012#3013#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,7 +44,7 @@
       <file leaf-file-name="BibliotecaController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="897">
               <caret line="54" column="92" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -55,10 +57,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BibliotecaControllerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BibliotecaAppTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="70" column="29" lean-forward="true" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BibliotecaControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
+            <state relative-caret-position="13">
               <caret line="154" column="37" lean-forward="true" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -79,17 +91,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/model/User.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
-              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="92">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding>
-                <element signature="e#522#523#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-                <element signature="e#625#626#0" expanded="true" />
-                <element signature="e#683#684#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#1004#1005#0" expanded="true" />
+                <element signature="e#1035#1036#0" expanded="true" />
+                <element signature="e#1098#1099#0" expanded="true" />
+                <element signature="e#1152#1153#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,8 +117,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -135,18 +151,19 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/core/Library.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/model/Movie.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/core/VideoStore.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/status/OptionStatus.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/validator/LoginValidator.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/validator/LoginValidatorTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/model/User.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/command/InputReader.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Main.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/controller/UserControllerTest.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/status/OptionStatus.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/status/UserAccountMenuOptionStatus.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
       </list>
     </option>
   </component>
@@ -157,8 +174,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="166" />
-    <option name="y" value="170" />
+    <option name="x" value="192" />
+    <option name="y" value="277" />
     <option name="width" value="1529" />
     <option name="height" value="880" />
   </component>
@@ -317,7 +334,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BibliotecaControllerTest.should_prompt_message_when_user_account_not_exist">
+  <component name="RunManager" selected="JUnit.BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -378,6 +395,31 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="biblioteca" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
+      <option name="METHOD_NAME" value="should_print_user_account_menu_when_choose_user_account_option" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="BibliotecaControllerTest.should_prompt_message_when_login_library_number_in_wrong_format" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -416,31 +458,6 @@
       <option name="PACKAGE_NAME" value="com.twu.biblioteca.controller" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.controller.BibliotecaControllerTest" />
       <option name="METHOD_NAME" value="should_prompt_message_when_user_account_not_exist" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="biblioteca" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.controller.BibliotecaControllerTest" />
-      <option name="METHOD_NAME" value="should_prompt_successful_login_message_when_login_right" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -514,19 +531,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_message_when_login_library_number_in_wrong_format" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_message_when_user_account_not_exist" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_message_when_login_library_number_in_wrong_format" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_message_when_user_account_not_exist" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_message_when_user_account_not_exist" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_message_when_login_library_number_in_wrong_format" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_message_when_user_account_not_exist" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_message_when_login_library_number_in_wrong_format" />
       </list>
     </recent_temporary>
   </component>
@@ -547,14 +564,7 @@
       <workItem from="1524751337066" duration="18142000" />
       <workItem from="1524810631256" duration="3334000" />
       <workItem from="1524835602224" duration="14689000" />
-      <workItem from="1524901475223" duration="7582000" />
-    </task>
-    <task id="LOCAL-00006" summary="feat:implement test &quot;should_return_false_and_prompt_message_when_input_invalid&quot;">
-      <created>1524748600949</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1524748600949</updated>
+      <workItem from="1524901475223" duration="8982000" />
     </task>
     <task id="LOCAL-00007" summary="test:add test &quot;should_print_main_menu_again_when_input_invalid&quot;">
       <created>1524748796112</created>
@@ -892,7 +902,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524906950780</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="test:add test &quot;should_prompt_message_when_user_account_not_exist&quot;">
+      <created>1524909094736</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1524909094736</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -908,6 +925,15 @@
     <history-entry file="All_in_biblioteca - 2018.04.28 at 17h 44m 58s.xml">
       <configuration name="All in biblioteca" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_biblioteca - 2018.04.28 at 18h 07m 28s.xml">
+      <configuration name="All in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BibliotecaAppTest_should_print_user_account_menu_when_choose_user_account_option - 2018.04.28 at 18h 14m 01s.xml">
+      <configuration name="BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BibliotecaAppTest_should_print_user_account_menu_when_choose_user_account_option - 2018.04.28 at 18h 14m 32s.xml">
+      <configuration name="BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="BibliotecaControllerTest_should_prompt_message_when_login_library_number_in_wrong_format - 2018.04.28 at 17h 37m 27s.xml">
       <configuration name="BibliotecaControllerTest.should_prompt_message_when_login_library_number_in_wrong_format" configurationId="JUnit" />
     </history-entry>
@@ -917,26 +943,17 @@
     <history-entry file="BibliotecaControllerTest_should_prompt_message_when_user_account_not_exist - 2018.04.28 at 17h 51m 18s.xml">
       <configuration name="BibliotecaControllerTest.should_prompt_message_when_user_account_not_exist" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaControllerTest_should_prompt_successful_login_message_when_login_right - 2018.04.28 at 17h 36m 41s.xml">
-      <configuration name="BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaControllerTest_should_prompt_successful_login_message_when_login_right - 2018.04.28 at 17h 37m 03s.xml">
-      <configuration name="BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InputReaderTest - 2018.04.28 at 17h 35m 22s.xml">
-      <configuration name="InputReaderTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54444000" />
+    <option name="totallyTimeSpent" value="55844000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="166" y="170" width="1529" height="880" extended-state="0" />
+    <frame x="192" y="277" width="1529" height="880" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32739726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32722145" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1002,7 +1019,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test:add test &quot;should_return_invalid_when_inpu_option_non_digit&quot;" />
     <MESSAGE value="feat:implement test &quot;should_return_invalid_when_inpu_option_non_digit&quot;" />
     <MESSAGE value="test:add test &quot;should_return_book_name_when_input&quot;" />
     <MESSAGE value="feat:implement test &quot;should_return_book_name_when_input&quot;" />
@@ -1027,7 +1043,8 @@
     <MESSAGE value="test:add test &quot;should_prompt_message_when_login_library_number_in_wrong_format&quot;" />
     <MESSAGE value="test:add test &quot;should_return_true_when_user_number_and_password_all_correct&quot;" />
     <MESSAGE value="feat:implement test &quot;should_return_false_when_user_account_no_exist&quot; and refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:implement test &quot;should_return_false_when_user_account_no_exist&quot; and refactor" />
+    <MESSAGE value="test:add test &quot;should_prompt_message_when_user_account_not_exist&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_prompt_message_when_user_account_not_exist&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1036,13 +1053,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/biblioteca.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1267,14 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/status/OptionStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/model/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1346,14 +1348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1840">
-          <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/UserControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1362,9 +1356,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="154" column="37" lean-forward="true" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8862#8863#0" expanded="true" />
+            <element signature="e#8909#8910#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-734">
+        <state relative-caret-position="92">
           <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1380,17 +1394,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/status/MainMenuOptionStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567">
-          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        <state relative-caret-position="230">
+          <caret line="10" column="53" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="10" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/status/UserAccountMenuOptionStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="897">
           <caret line="54" column="92" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1402,23 +1424,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="207">
+          <caret line="18" column="49" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="49" />
+          <folding>
+            <element signature="e#1278#1279#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+            <element signature="e#2947#2948#0" expanded="true" />
+            <element signature="e#3012#3013#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="154" column="37" lean-forward="true" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8862#8863#0" expanded="true" />
-            <element signature="e#8909#8910#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="70" column="29" lean-forward="true" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

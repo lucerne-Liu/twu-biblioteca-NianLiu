@@ -2,10 +2,11 @@ package com.twu.biblioteca;
 
 import com.twu.biblioteca.command.InputReader;
 import com.twu.biblioteca.controller.BibliotecaController;
-import com.twu.biblioteca.status.OptionStatus;
+import com.twu.biblioteca.status.MainMenuOptionStatus;
+import com.twu.biblioteca.status.UserAccountMenuOptionStatus;
 
 public class BibliotecaApp {
-    public static final String MAIN_MENU = "1. Login\n"
+    private static final String MAIN_MENU = "1. User Accounts\n"
             + "2. List Books\n"
             + "3. Checkout Book\n"
             + "4. Return Book\n"
@@ -13,6 +14,9 @@ public class BibliotecaApp {
             + "6. Check-out Movie\n"
             + "7. Quit\n"
             + "Please enter your choice(1～7):\n";
+    private static final String ACCOUNT_MENU = "1. Login\n"
+            + "2. Quit\n"
+            + "Please enter your choice(1～2):\n";
     private InputReader reader;
     private BibliotecaController bibliotecaController;
 
@@ -29,31 +33,53 @@ public class BibliotecaApp {
         System.out.print(MAIN_MENU);
     }
 
+    private void printUserMenu() {
+        System.out.print(ACCOUNT_MENU);
+    }
+
+    private void printOptionWrongMessage() {
+        System.out.print("Select a valid option! Please select again.\n");
+    }
+
+    public void proceedUserAccountMenu(){
+        while(true){
+            printUserMenu();
+            String options = reader.readOption();
+            if (options.equals(UserAccountMenuOptionStatus.LOG_IN)){
+                bibliotecaController.logIn();
+            } else if (options.equals(UserAccountMenuOptionStatus.BACK_TO_MAIN_MENU)) {
+                break;
+            } else {
+                printOptionWrongMessage();
+            }
+        }
+    }
+
     public boolean proceedMainMenu() {
         printMainMenu();
         switch (reader.readOption()) {
-            case OptionStatus.Log_In:
-                bibliotecaController.logIn();
+            case MainMenuOptionStatus.User_Accounts:
+                proceedUserAccountMenu();
                 return true;
-            case OptionStatus.List_Books:
+            case MainMenuOptionStatus.List_Books:
                 bibliotecaController.printBooksList();
                 return true;
-            case OptionStatus.Checkout_Book:
+            case MainMenuOptionStatus.Checkout_Book:
                 bibliotecaController.checkOutBook();
                 return true;
-            case OptionStatus.Return_Book:
+            case MainMenuOptionStatus.Return_Book:
                 bibliotecaController.returnBook();
                 return true;
-            case OptionStatus.List_Movies:
+            case MainMenuOptionStatus.List_Movies:
                 bibliotecaController.printMoviesList();
                 return true;
-            case OptionStatus.Checkout_Movie:
+            case MainMenuOptionStatus.Checkout_Movie:
                 bibliotecaController.checkOutMovie();
                 return true;
-            case OptionStatus.Quit:
+            case MainMenuOptionStatus.Quit:
                 return false;
             default:
-                System.out.print("Select a valid option! Please select again.\n");
+                printOptionWrongMessage();
                 return true;
         }
     }

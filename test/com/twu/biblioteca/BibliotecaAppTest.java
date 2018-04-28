@@ -2,7 +2,8 @@ package com.twu.biblioteca;
 
 
 import com.twu.biblioteca.command.InputReader;
-import com.twu.biblioteca.status.OptionStatus;
+import com.twu.biblioteca.status.MainMenuOptionStatus;
+import com.twu.biblioteca.status.UserAccountMenuOptionStatus;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,14 +15,17 @@ import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
 public class BibliotecaAppTest {
-    private static final String BOOK_LIST_OPTION = OptionStatus.List_Books;
-    private static final String CHECK_OUT_BOOK_OPTION = OptionStatus.Checkout_Book;
-    private static final String RETURN_BOOK_OPTION = OptionStatus.Return_Book;
-    private static final String MOVIE_LIST_OPTION = OptionStatus.List_Movies;
-    private static final String CHECK_OUT_MOVIE_OPTION = OptionStatus.Checkout_Movie;
-    private static final String QUIT_OPTION = OptionStatus.Quit;
-    private static final String INVALID_OPTION = OptionStatus.INVALID_OPTION;
-    private static final String MAIN_MENU = "1. Login\n"
+    private static final String USER_ACCOUNTS_OPTION = MainMenuOptionStatus.User_Accounts;
+    private static final String BOOK_LIST_OPTION = MainMenuOptionStatus.List_Books;
+    private static final String CHECK_OUT_BOOK_OPTION = MainMenuOptionStatus.Checkout_Book;
+    private static final String RETURN_BOOK_OPTION = MainMenuOptionStatus.Return_Book;
+    private static final String MOVIE_LIST_OPTION = MainMenuOptionStatus.List_Movies;
+    private static final String CHECK_OUT_MOVIE_OPTION = MainMenuOptionStatus.Checkout_Movie;
+    private static final String QUIT_OPTION = MainMenuOptionStatus.Quit;
+    private static final String INVALID_OPTION = MainMenuOptionStatus.INVALID_OPTION;
+    private static final String LOGIN_OPTION = UserAccountMenuOptionStatus.LOG_IN;
+    private static final String BACK_TO_MAIN_MENU_OPTION = UserAccountMenuOptionStatus.BACK_TO_MAIN_MENU;
+    private static final String MAIN_MENU = "1. User Accounts\n"
             + "2. List Books\n"
             + "3. Checkout Book\n"
             + "4. Return Book\n"
@@ -29,6 +33,9 @@ public class BibliotecaAppTest {
             + "6. Check-out Movie\n"
             + "7. Quit\n"
             + "Please enter your choice(1～7):\n";
+    private static final String ACCOUNT_MENU = "1. Login\n"
+            + "2. Quit\n"
+            + "Please enter your choice(1～2):\n";
     private static final String EXIST_BOOK_NAME = "Head First Java";
     private static final String ANOTHER_EXIST_BOOK_NAME = "Head First JavaScript";
     private static final String ABSENT_BOOK_NAME = "Head First Python";
@@ -56,6 +63,13 @@ public class BibliotecaAppTest {
     public void should_print_main_menu_after_welcome_message() {
         bibliotecaApp.printMainMenu();
         assertThat(systemOut().endsWith(MAIN_MENU)).isTrue();
+    }
+
+    @Test
+    public void should_print_user_account_menu_when_choose_user_account_option() {
+        when(reader.readString()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains(ACCOUNT_MENU)).isTrue();
     }
 
     @Test
@@ -157,12 +171,13 @@ public class BibliotecaAppTest {
                         "Test-Driven Development                           Kent Belt                                         2004                                              \n" +
                         "Refactoring: Improving the Design                 Martin Fowler                                     2010                                              \n" +
                         "Head First Android Development                    Dawn Griffiths                                    2016                                              \n" +
-                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n")).isTrue();;
+                        "Head First JavaScript                             Eric T. Freeman                                   2017                                              \n")).isTrue();
+        ;
         verify(reader, times(2)).readString();
     }
 
     @Test
-    public void should_print_successful_return_message_when_book_name_correct_but_no_spaces(){
+    public void should_print_successful_return_message_when_book_name_correct_but_no_spaces() {
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readString()).thenReturn(EXIST_BOOK_NAME).thenReturn(CORRECT_BOOK_NAME_WITH_NO_SPACES);
         bibliotecaApp.init();
@@ -171,7 +186,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void should_print_unsuccessful_return_message_when_book_name_wrong(){
+    public void should_print_unsuccessful_return_message_when_book_name_wrong() {
         when(reader.readOption()).thenReturn(CHECK_OUT_BOOK_OPTION).thenReturn(RETURN_BOOK_OPTION).thenReturn(BOOK_LIST_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readString()).thenReturn(EXIST_BOOK_NAME).thenReturn(ABSENT_BOOK_NAME);
         bibliotecaApp.init();
@@ -188,7 +203,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void should_print_unsuccessful_return_message_when_book_name_right_but_not_rent_from_this_library(){
+    public void should_print_unsuccessful_return_message_when_book_name_right_but_not_rent_from_this_library() {
         when(reader.readOption()).thenReturn(RETURN_BOOK_OPTION).thenReturn(QUIT_OPTION);
         when(reader.readString()).thenReturn(EXIST_BOOK_NAME);
         bibliotecaApp.init();
@@ -196,7 +211,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void should_print_movie_list_when_choose_List_Movies_option(){
+    public void should_print_movie_list_when_choose_List_Movies_option() {
         when(reader.readOption()).thenReturn(MOVIE_LIST_OPTION).thenReturn(QUIT_OPTION);
         bibliotecaApp.init();
         assertThat(systemOut().contains("Name                          Year                          Director                      Movie Rating                  \n" +
