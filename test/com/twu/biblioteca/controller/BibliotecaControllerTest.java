@@ -22,7 +22,7 @@ public class BibliotecaControllerTest {
     private static final String EXIST_USER_NUMBER = "111-1111";
     private static final String EXIST_USER_PWD = "123456";
     private static final String EXIST_USER_NAME = "Kate";
-    public static final String NOT_EXIST_PWD = "58555";
+    private static final String NOT_EXIST_PWD = "58555";
     private BibliotecaController bibliotecaController;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;

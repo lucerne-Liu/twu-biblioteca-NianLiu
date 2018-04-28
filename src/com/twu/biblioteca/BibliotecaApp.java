@@ -15,7 +15,7 @@ public class BibliotecaApp {
             + "7. Quit\n"
             + "Please enter your choice(1～7):\n";
     private static final String ACCOUNT_MENU_WITHOUT_LOGIN = "1. Login\n"
-            + "2.Press Any Other key to Back to Main Menu\n"
+            + "2. Press Any Other key to Back to Main Menu\n"
             + "Please enter your choice(1～2):\n";
     private static final String ACCOUNT_MENU = "1. Login\n"
             + "2. User Information\n"

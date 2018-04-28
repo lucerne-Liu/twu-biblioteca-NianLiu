@@ -28,7 +28,7 @@ public class Library implements RentImplement {
         bookList.stream().filter(book -> !book.getRentedStatus()).forEach(item -> System.out.print(item.toString()));
     }
 
-    public boolean changeBookRentStatus(String name, boolean isRent, String rentedBy) {
+    private boolean changeBookRentStatus(String name, boolean isRent, String rentedBy) {
         Book checkOutBook = new Book(name, "", 0);
         Boolean hasThisBook = bookList.stream().anyMatch(item -> item.equals(checkOutBook) && item.getRentedStatus() == !isRent);
         if (hasThisBook) {
@@ -54,4 +54,5 @@ public class Library implements RentImplement {
     public boolean returnMedia(String name) {
         return changeBookRentStatus(name, false, "");
     }
+
 }
