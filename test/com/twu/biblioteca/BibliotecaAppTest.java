@@ -24,6 +24,7 @@ public class BibliotecaAppTest {
     private static final String QUIT_OPTION = MainMenuOptionStatus.Quit;
     private static final String INVALID_OPTION = MainMenuOptionStatus.INVALID_OPTION;
     private static final String LOGIN_OPTION = UserAccountMenuOptionStatus.LOG_IN;
+    private static final String USER_INFORMATION_OPTION = UserAccountMenuOptionStatus.USER_INFORMATION;
     private static final String BACK_TO_MAIN_MENU_OPTION = UserAccountMenuOptionStatus.BACK_TO_MAIN_MENU;
     private static final String MAIN_MENU = "1. User Accounts\n"
             + "2. List Books\n"
@@ -33,9 +34,13 @@ public class BibliotecaAppTest {
             + "6. Check-out Movie\n"
             + "7. Quit\n"
             + "Please enter your choice(1～7):\n";
-    private static final String ACCOUNT_MENU = "1. Login\n"
+    private static final String ACCOUNT_MENU_WITHOUT_LOGIN = "1. Login\n"
             + "2. Back to Main Menu\n"
             + "Please enter your choice(1～2):\n";
+    private static final String ACCOUNT_MENU= "1. Login\n"
+            + "2. User information\n"
+            + "3. Back to Main Menu\n"
+            + "Please enter your choice(1～3):\n";
     private static final String EXIST_BOOK_NAME = "Head First Java";
     private static final String ANOTHER_EXIST_BOOK_NAME = "Head First JavaScript";
     private static final String ABSENT_BOOK_NAME = "Head First Python";
@@ -260,6 +265,14 @@ public class BibliotecaAppTest {
     @Test
     public void should_not_show_user_information_option_when_not_login(){
         when(reader.readOption()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
+        bibliotecaApp.init();
+        assertThat(systemOut().contains(ACCOUNT_MENU_WITHOUT_LOGIN)).isTrue();
+    }
+
+    @Test
+    public void should_show_user_information_option_when_logged_in(){
+        when(reader.readOption()).thenReturn(USER_ACCOUNTS_OPTION).thenReturn(LOGIN_OPTION).thenReturn(BACK_TO_MAIN_MENU_OPTION).thenReturn(QUIT_OPTION);
+        when(reader.readString()).thenReturn(EXIST_USER_NUMBER).thenReturn(EXIST_USER_PWD);
         bibliotecaApp.init();
         assertThat(systemOut().contains(ACCOUNT_MENU)).isTrue();
     }
