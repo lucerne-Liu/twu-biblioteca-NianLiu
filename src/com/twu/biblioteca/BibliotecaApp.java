@@ -14,9 +14,13 @@ public class BibliotecaApp {
             + "6. Check-out Movie\n"
             + "7. Quit\n"
             + "Please enter your choice(1～7):\n";
-    private static final String ACCOUNT_MENU = "1. Login\n"
+    private static final String ACCOUNT_MENU_WITHOUT_LOGIN = "1. Login\n"
             + "2. Back to Main Menu\n"
             + "Please enter your choice(1～2):\n";
+    private static final String ACCOUNT_MENU = "1. Login\n"
+            + "2. User information\n"
+            + "3. Back to Main Menu\n"
+            + "Please enter your choice(1～3):\n";
     private InputReader reader;
     private BibliotecaController bibliotecaController;
 
@@ -34,20 +38,26 @@ public class BibliotecaApp {
     }
 
     private void printUserMenu() {
-        System.out.print(ACCOUNT_MENU);
+        if (bibliotecaController.checkLoginStatus()){
+            System.out.print(ACCOUNT_MENU);
+        }else {
+            System.out.print(ACCOUNT_MENU_WITHOUT_LOGIN);
+        }
     }
 
     private void printOptionWrongMessage() {
         System.out.print("Select a valid option! Please select again.\n");
     }
 
-    public void proceedUserAccountMenu(){
-        while(true){
+    public void proceedUserAccountMenu() {
+        while (true) {
             printUserMenu();
             String options = reader.readOption();
-            if (options.equals(UserAccountMenuOptionStatus.LOG_IN)){
+            if (options.equals(UserAccountMenuOptionStatus.LOG_IN)) {
                 bibliotecaController.logIn();
-            } else if (options.equals(UserAccountMenuOptionStatus.BACK_TO_MAIN_MENU)) {
+            }else if (bibliotecaController.checkLoginStatus() && options.equals(UserAccountMenuOptionStatus.USER_INFORMATION)) {
+
+            }  else if (options.equals(UserAccountMenuOptionStatus.BACK_TO_MAIN_MENU)) {
                 break;
             } else {
                 printOptionWrongMessage();

@@ -60,8 +60,12 @@ public class BibliotecaController {
         }
     }
 
+    public boolean checkLoginStatus(){
+        return userController.checkLoginStatus();
+    }
+
     public void proceedCommandIfLoggedIn(String command){
-        if (userController.checkLoginStatus()){
+        if (checkLoginStatus()){
             if (command.equals(MainMenuOptionStatus.Checkout_Book)){
                 checkOutBook();
             } else if (command.equals(MainMenuOptionStatus.Return_Book)) {

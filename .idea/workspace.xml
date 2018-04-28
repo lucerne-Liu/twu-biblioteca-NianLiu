@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="test:add test &quot;should_not_show_user_information_option_when_not_login&quot;">
+    <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/status/UserAccountMenuOptionStatus.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/status/UserAccountMenuOptionStatus.java" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,13 +28,13 @@
       <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+            <state relative-caret-position="175">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
-                <element signature="e#1291#1292#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#3052#3053#0" expanded="true" />
-                <element signature="e#3117#3118#0" expanded="true" />
+                <element signature="e#1634#1635#0" expanded="true" />
+                <element signature="e#1715#1716#0" expanded="true" />
+                <element signature="e#3530#3531#0" expanded="true" />
+                <element signature="e#3595#3596#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,14 +43,16 @@
       <file leaf-file-name="BibliotecaController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="66" column="70" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="70" />
+            <state relative-caret-position="0">
+              <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#614#615#0" expanded="true" />
                 <element signature="e#654#655#0" expanded="true" />
                 <element signature="e#1399#1400#0" expanded="true" />
                 <element signature="e#1442#1443#0" expanded="true" />
+                <element signature="e#2263#2264#0" expanded="true" />
+                <element signature="e#2319#2320#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,8 +61,8 @@
       <file leaf-file-name="BibliotecaAppTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="274" column="30" lean-forward="true" selection-start-line="274" selection-start-column="30" selection-end-line="274" selection-end-column="30" />
+            <state relative-caret-position="128">
+              <caret line="274" column="45" lean-forward="false" selection-start-line="274" selection-start-column="45" selection-end-line="274" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -156,12 +158,12 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/model/Book.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/core/Library.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/core/LibraryTest.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/controller/UserController.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/status/UserAccountMenuOptionStatus.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
       </list>
     </option>
   </component>
@@ -172,8 +174,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="239" />
-    <option name="y" value="213" />
+    <option name="x" value="240" />
+    <option name="y" value="244" />
     <option name="width" value="1529" />
     <option name="height" value="880" />
   </component>
@@ -563,14 +565,7 @@
       <workItem from="1524751337066" duration="18142000" />
       <workItem from="1524810631256" duration="3334000" />
       <workItem from="1524835602224" duration="14689000" />
-      <workItem from="1524901475223" duration="13680000" />
-    </task>
-    <task id="LOCAL-00015" summary="feat:implement test &quot;should_not_show_checked_out_books_after_check_out&quot;">
-      <created>1524759679837</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1524759679837</updated>
+      <workItem from="1524901475223" duration="14106000" />
     </task>
     <task id="LOCAL-00016" summary="test:add test &quot;should_prompt_successful_msg_when_checked_out&quot;">
       <created>1524760020767</created>
@@ -908,7 +903,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524914935630</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="test:add test &quot;should_show_user_information_option_when_logged_in&quot;">
+      <created>1524915252704</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1524915252704</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -924,9 +926,6 @@
     <history-entry file="BibliotecaAppTest_should_not_return_books_when_not_login - 2018.04.28 at 19h 05m 29s.xml">
       <configuration name="BibliotecaAppTest.should_not_return_books_when_not_login" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_not_show_checked_out_books_after_check_out - 2018.04.28 at 19h 03m 47s.xml">
-      <configuration name="BibliotecaAppTest.should_not_show_checked_out_books_after_check_out" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BibliotecaAppTest_should_not_show_user_information_option_when_not_login - 2018.04.28 at 19h 28m 27s.xml">
       <configuration name="BibliotecaAppTest.should_not_show_user_information_option_when_not_login" configurationId="JUnit" />
     </history-entry>
@@ -934,6 +933,9 @@
       <configuration name="BibliotecaAppTest.should_show_user_information_option_when_logged_in" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BibliotecaAppTest_should_show_user_information_option_when_logged_in - 2018.04.28 at 19h 34m 02s.xml">
+      <configuration name="BibliotecaAppTest.should_show_user_information_option_when_logged_in" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BibliotecaAppTest_should_show_user_information_option_when_logged_in - 2018.04.28 at 19h 41m 08s.xml">
       <configuration name="BibliotecaAppTest.should_show_user_information_option_when_logged_in" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BibliotecaControllerTest_should_prompt_message_when_check_out_or_return_book_without_login - 2018.04.28 at 19h 25m 42s.xml">
@@ -944,10 +946,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60542000" />
+    <option name="totallyTimeSpent" value="60968000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="239" y="213" width="1529" height="880" extended-state="0" />
+    <frame x="240" y="244" width="1529" height="880" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -959,7 +961,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3906911" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3906911" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21156558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1019,7 +1021,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test:add test &quot;should_print_movies_list&quot;" />
     <MESSAGE value="feat:implement test &quot;should_print_movies_list&quot; and refactor" />
     <MESSAGE value="test:add test &quot;should_prompt_successful_msg_when_checked_out_movie&quot;" />
     <MESSAGE value="test:add test &quot;should_prompt_successful_msg_when_checked_out_movie_name_with_no_spaces&quot;" />
@@ -1044,7 +1045,8 @@
     <MESSAGE value="test:add test &quot;should_not_return_books_when_not_login&quot;" />
     <MESSAGE value="test:add test &quot;should_prompt_message_when_check_out_or_return_book_without_login&quot;" />
     <MESSAGE value="test:add test &quot;should_not_show_user_information_option_when_not_login&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_not_show_user_information_option_when_not_login&quot;" />
+    <MESSAGE value="test:add test &quot;should_show_user_information_option_when_logged_in&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_show_user_information_option_when_logged_in&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1372,19 +1374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-          <folding>
-            <element signature="e#1291#1292#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#3052#3053#0" expanded="true" />
-            <element signature="e#3117#3118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -1409,20 +1398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="66" column="70" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#1399#1400#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1443,10 +1418,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#2263#2264#0" expanded="true" />
+            <element signature="e#2319#2320#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#1634#1635#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#3530#3531#0" expanded="true" />
+            <element signature="e#3595#3596#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="274" column="30" lean-forward="true" selection-start-line="274" selection-start-column="30" selection-end-line="274" selection-end-column="30" />
+        <state relative-caret-position="128">
+          <caret line="274" column="45" lean-forward="false" selection-start-line="274" selection-start-column="45" selection-end-line="274" selection-end-column="45" />
           <folding />
         </state>
       </provider>
