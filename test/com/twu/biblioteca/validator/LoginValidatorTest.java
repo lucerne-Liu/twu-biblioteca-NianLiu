@@ -20,7 +20,10 @@ public class LoginValidatorTest {
 
     @Test
     public void should_return_false_when_library_number_in_wrong_format(){
-        assertFalse(validator.validateLibraryNumber("111213"));
+        assertFalse(validator.validateLibraryNumber("1112134"));
+        assertFalse(validator.validateLibraryNumber("111"));
+        assertFalse(validator.validateLibraryNumber("111-11113"));
+        assertFalse(validator.validateLibraryNumber("11111-11"));
     }
 
 }

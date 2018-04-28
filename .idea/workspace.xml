@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="test:add test &quot;should_prompt_successful_login_message_when_login_right&quot;">
+    <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/validator/LoginValidator.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/validator/LoginValidator.java" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/validator/LoginValidatorTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/validator/LoginValidatorTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,20 +43,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BibliotecaControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="19" column="60" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7745#7746#0" expanded="true" />
-                <element signature="e#7792#7793#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoginValidator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/validator/LoginValidator.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,26 +53,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginValidatorTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/validator/LoginValidatorTest.java">
+      <file leaf-file-name="BibliotecaControllerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+            <state relative-caret-position="180">
+              <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="50" selection-end-line="140" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#231#232#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#8077#8078#0" expanded="true" />
+                <element signature="e#8124#8125#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../2018-04-04-05-01-01-1522818061/src/main/java/tw/validator/InputValidator.java">
+      <file leaf-file-name="LoginValidatorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/validator/LoginValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="244">
+              <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,9 +127,9 @@
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/command/InputReader.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/validator/LoginValidatorTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/validator/LoginValidator.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/validator/LoginValidatorTest.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java" />
       </list>
     </option>
   </component>
@@ -150,8 +140,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="227" />
-    <option name="y" value="309" />
+    <option name="x" value="200" />
+    <option name="y" value="350" />
     <option name="width" value="1529" />
     <option name="height" value="886" />
   </component>
@@ -303,7 +293,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LoginValidatorTest.should_return_true_when_library_number_in_right_format">
+  <component name="RunManager" selected="JUnit.BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -364,19 +354,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_movie_already_checked_out" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="biblioteca" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="should_prompt_unsuccessful_message_when_input_movie_already_checked_out" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.controller.BibliotecaControllerTest" />
+      <option name="METHOD_NAME" value="should_prompt_successful_login_message_when_login_right" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -502,17 +492,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_movie_already_checked_out" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LoginValidatorTest.should_return_true_when_library_number_in_right_format" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LoginValidatorTest.should_return_false_when_library_number_in_wrong_format" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.LoginValidatorTest.should_return_true_when_library_number_in_right_format" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LoginValidatorTest.should_return_false_when_library_number_in_wrong_format" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LoginValidatorTest.should_return_true_when_library_number_in_right_format" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.LoginValidatorTest.should_return_false_when_library_number_in_wrong_format" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_movie_already_checked_out" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LoginValidatorTest.should_return_true_when_library_number_in_right_format" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -533,14 +523,7 @@
       <workItem from="1524751337066" duration="18142000" />
       <workItem from="1524810631256" duration="3334000" />
       <workItem from="1524835602224" duration="14689000" />
-      <workItem from="1524901475223" duration="1860000" />
-    </task>
-    <task id="LOCAL-00002" summary="feat:implement test &quot;should_print_welcome_message_when_start_app&quot;">
-      <created>1524742536994</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1524742536994</updated>
+      <workItem from="1524901475223" duration="2237000" />
     </task>
     <task id="LOCAL-00003" summary="test:add test &quot;should_print_main_menu_after_welcome_message&quot;">
       <created>1524743528725</created>
@@ -878,16 +861,17 @@
       <option name="project" value="LOCAL" />
       <updated>1524903085920</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="feat:implement test &quot;should_return_false_when_library_number_in_wrong_format&quot; and refactor">
+      <created>1524903364062</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1524903364062</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_biblioteca - 2018.04.28 at 03h 46m 52s.xml">
-      <configuration name="All in biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_biblioteca - 2018.04.28 at 03h 59m 18s.xml">
-      <configuration name="All in biblioteca" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BibliotecaAppTest_should_prompt_unsuccessful_message_when_input_movie_already_checked_out - 2018.04.28 at 03h 09m 40s.xml">
       <configuration name="BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_movie_already_checked_out" configurationId="JUnit" />
     </history-entry>
@@ -897,10 +881,16 @@
     <history-entry file="BibliotecaAppTest_should_prompt_unsuccessful_message_when_input_movie_already_checked_out - 2018.04.28 at 03h 11m 02s.xml">
       <configuration name="BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_movie_already_checked_out" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BibliotecaControllerTest_should_prompt_successful_login_message_when_login_right - 2018.04.28 at 16h 19m 17s.xml">
+      <configuration name="BibliotecaControllerTest.should_prompt_successful_login_message_when_login_right" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="LoginValidatorTest_should_return_false_when_library_number_in_wrong_format - 2018.04.28 at 16h 11m 31s.xml">
       <configuration name="LoginValidatorTest.should_return_false_when_library_number_in_wrong_format" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LoginValidatorTest_should_return_false_when_library_number_in_wrong_format - 2018.04.28 at 16h 14m 43s.xml">
+      <configuration name="LoginValidatorTest.should_return_false_when_library_number_in_wrong_format" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LoginValidatorTest_should_return_false_when_library_number_in_wrong_format - 2018.04.28 at 16h 16m 40s.xml">
       <configuration name="LoginValidatorTest.should_return_false_when_library_number_in_wrong_format" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LoginValidatorTest_should_return_true_when_library_number_in_right_format - 2018.04.28 at 15h 58m 39s.xml">
@@ -914,10 +904,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48722000" />
+    <option name="totallyTimeSpent" value="49099000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="227" y="309" width="1529" height="886" extended-state="0" />
+    <frame x="200" y="350" width="1529" height="886" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -929,7 +919,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38741258" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38741258" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -988,7 +978,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test:add test &quot;should_print_unsuccessful_return_message_when_book_name_wrong&quot;" />
     <MESSAGE value="feat:implement test &quot;should_print_unsuccessful_return_message_when_book_name_wrong&quot;" />
     <MESSAGE value="test:add test &quot;should_return_input_option_when_is_right&quot;" />
     <MESSAGE value="feat:implement test &quot;should_return_input_option_when_is_right&quot;" />
@@ -1013,7 +1002,8 @@
     <MESSAGE value="test:add test &quot;should_prompt_successful_login_message_when_login_right&quot;" />
     <MESSAGE value="test:add test &quot;should_return_true_when_library_number_in_right_format&quot;" />
     <MESSAGE value="test:add test &quot;should_return_false_when_library_number_in_wrong_format&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_return_false_when_library_number_in_wrong_format&quot;" />
+    <MESSAGE value="feat:implement test &quot;should_return_false_when_library_number_in_wrong_format&quot; and refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:implement test &quot;should_return_false_when_library_number_in_wrong_format&quot; and refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1311,7 +1301,7 @@
         <state relative-caret-position="322">
           <caret line="14" column="49" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="14" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="e#789#790#0" expanded="false" />
             <element signature="e#857#858#0" expanded="false" />
             <element signature="e#892#893#0" expanded="false" />
@@ -1361,18 +1351,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="19" column="60" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7745#7746#0" expanded="true" />
-            <element signature="e#7792#7793#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../2018-04-04-05-01-01-1522818061/src/main/java/tw/validator/InputValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1391,12 +1369,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/validator/LoginValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+        <state relative-caret-position="244">
+          <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#231#232#0" expanded="true" />
             <element signature="e#279#280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="50" selection-end-line="140" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8077#8078#0" expanded="true" />
+            <element signature="e#8124#8125#0" expanded="true" />
           </folding>
         </state>
       </provider>

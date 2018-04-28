@@ -126,7 +126,7 @@ public class BibliotecaControllerTest {
     }
 
     @Test
-    public void should_prompt_successful_login_message_when_login_right(){
+    public void should_prompt_successful_login_message_when_login_right() {
         when(reader.readString()).thenReturn(EXIST_USER_NUMBER).thenReturn(EXIST_USER_PWD);
         bibliotecaController.logIn();
         assertThat(systemOut().startsWith("Please enter your library number(xxx-xxxx):\n")).isTrue();
@@ -135,9 +135,12 @@ public class BibliotecaControllerTest {
     }
 
     @Test
-    public void should_prompt_message_when_login_library_number_in_wrong_format(){
-        when(reader.readString()).thenReturn("1112222");
+    public void should_prompt_message_when_login_library_number_in_wrong_format() {
+        when(reader.readString()).thenReturn("11111-11").thenReturn(EXIST_USER_NUMBER).thenReturn(EXIST_USER_PWD);
         bibliotecaController.logIn();
+        assertThat(systemOut().contains("The library number format is wrong!\n"
+                + "Please enter your library number(xxx-xxxx):\n")).isTrue();
+        assertThat(systemOut().endsWith("Login Successful! Now you can check-out and return books.\n")).isTrue();
     }
 
     private String systemOut() {
