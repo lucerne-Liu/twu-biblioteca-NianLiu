@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88b1d933-a176-4eb2-aeaf-5918029f0657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,8 +58,8 @@
       <file leaf-file-name="BibliotecaAppTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="251" column="29" lean-forward="true" selection-start-line="251" selection-start-column="29" selection-end-line="251" selection-end-column="29" />
+            <state relative-caret-position="253">
+              <caret line="109" column="74" lean-forward="false" selection-start-line="109" selection-start-column="74" selection-end-line="109" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -69,8 +68,8 @@
       <file leaf-file-name="BibliotecaControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1049">
-              <caret line="112" column="94" lean-forward="false" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="94" />
+            <state relative-caret-position="198">
+              <caret line="21" column="58" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="21" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#8862#8863#0" expanded="true" />
@@ -163,9 +162,9 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/model/Book.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/core/Library.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/core/LibraryTest.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/controller/BibliotecaController.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" />
       </list>
     </option>
   </component>
@@ -176,8 +175,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="238" />
-    <option name="y" value="306" />
+    <option name="x" value="154" />
+    <option name="y" value="172" />
     <option name="width" value="1529" />
     <option name="height" value="880" />
   </component>
@@ -337,32 +336,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BibliotecaAppTest.should_not_check_out_book_when_not_login">
+  <component name="RunManager" selected="JUnit.All in biblioteca">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="biblioteca" />
-      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -398,7 +378,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="BibliotecaAppTest.should_not_check_out_book_when_not_login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecaAppTest.should_not_show_checked_out_books_after_check_out" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.twu.biblioteca.*" />
@@ -410,7 +390,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="should_not_check_out_book_when_not_login" />
+      <option name="METHOD_NAME" value="should_not_show_checked_out_books_after_check_out" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -423,7 +403,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecaAppTest.should_prompt_successful_msg_when_checked_out" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.twu.biblioteca.*" />
@@ -435,7 +415,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="should_print_user_account_menu_when_choose_user_account_option" />
+      <option name="METHOD_NAME" value="should_prompt_successful_msg_when_checked_out" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -448,19 +428,44 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LibraryTest.should_return_book_renter_name_when_input_book_name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotecaAppTest.should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.core.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="biblioteca" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca.core" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.core.LibraryTest" />
-      <option name="METHOD_NAME" value="should_return_book_renter_name_when_input_book_name" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
+      <option name="METHOD_NAME" value="should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_book_already_checked_out" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="biblioteca" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
+      <option name="METHOD_NAME" value="should_prompt_unsuccessful_message_when_input_book_already_checked_out" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -534,19 +539,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LibraryTest.should_return_book_renter_name_when_input_book_name" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_not_check_out_book_when_not_login" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_book_already_checked_out" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_successful_msg_when_checked_out" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_not_show_checked_out_books_after_check_out" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_not_check_out_book_when_not_login" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LibraryTest.should_return_book_renter_name_when_input_book_name" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in biblioteca" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_not_show_checked_out_books_after_check_out" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_successful_msg_when_checked_out" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_book_already_checked_out" />
       </list>
     </recent_temporary>
   </component>
@@ -567,14 +572,7 @@
       <workItem from="1524751337066" duration="18142000" />
       <workItem from="1524810631256" duration="3334000" />
       <workItem from="1524835602224" duration="14689000" />
-      <workItem from="1524901475223" duration="11535000" />
-    </task>
-    <task id="LOCAL-00010" summary="test:add test &quot;should_return_false_and_stop_app_when_choose_Quit&quot;">
-      <created>1524752554024</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1524752554024</updated>
+      <workItem from="1524901475223" duration="11918000" />
     </task>
     <task id="LOCAL-00011" summary="test:add test &quot;should_print_book_list&quot;">
       <created>1524753473725</created>
@@ -912,46 +910,53 @@
       <option name="project" value="LOCAL" />
       <updated>1524912564696</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="feat:implement test &quot;should_not_check_out_book_when_not_login&quot; and refactor">
+      <created>1524913058150</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1524913058150</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_biblioteca - 2018.04.28 at 18h 29m 06s.xml">
+    <history-entry file="All_in_biblioteca - 2018.04.28 at 19h 03m 52s.xml">
       <configuration name="All in biblioteca" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_not_check_out_book_when_not_login - 2018.04.28 at 18h 49m 04s.xml">
-      <configuration name="BibliotecaAppTest.should_not_check_out_book_when_not_login" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_should_not_show_checked_out_books_after_check_out - 2018.04.28 at 19h 03m 47s.xml">
+      <configuration name="BibliotecaAppTest.should_not_show_checked_out_books_after_check_out" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_not_check_out_book_when_not_login - 2018.04.28 at 18h 57m 25s.xml">
-      <configuration name="BibliotecaAppTest.should_not_check_out_book_when_not_login" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_should_print_successful_return_message_when_book_name_correct_but_no_spaces - 2018.04.28 at 19h 01m 37s.xml">
+      <configuration name="BibliotecaAppTest.should_print_successful_return_message_when_book_name_correct_but_no_spaces" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_print_user_account_menu_when_choose_user_account_option - 2018.04.28 at 18h 14m 01s.xml">
-      <configuration name="BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_should_print_unsuccessful_return_message_when_book_name_wrong - 2018.04.28 at 19h 01m 09s.xml">
+      <configuration name="BibliotecaAppTest.should_print_unsuccessful_return_message_when_book_name_wrong" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_print_user_account_menu_when_choose_user_account_option - 2018.04.28 at 18h 14m 32s.xml">
-      <configuration name="BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_should_prompt_successful_msg_when_checked_out - 2018.04.28 at 19h 03m 23s.xml">
+      <configuration name="BibliotecaAppTest.should_prompt_successful_msg_when_checked_out" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_print_user_account_menu_when_choose_user_account_option - 2018.04.28 at 18h 15m 05s.xml">
-      <configuration name="BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list - 2018.04.28 at 19h 02m 57s.xml">
+      <configuration name="BibliotecaAppTest.should_prompt_unsuccessful_message_when_check_out_book_not_on_the_list" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_print_user_account_menu_when_choose_user_account_option - 2018.04.28 at 18h 16m 08s.xml">
-      <configuration name="BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_should_prompt_unsuccessful_message_when_input_book_already_checked_out - 2018.04.28 at 19h 02m 28s.xml">
+      <configuration name="BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_book_already_checked_out" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BibliotecaAppTest_should_print_user_account_menu_when_choose_user_account_option - 2018.04.28 at 18h 18m 43s.xml">
-      <configuration name="BibliotecaAppTest.should_print_user_account_menu_when_choose_user_account_option" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_should_prompt_unsuccessful_message_when_input_book_already_checked_out - 2018.04.28 at 19h 02m 39s.xml">
+      <configuration name="BibliotecaAppTest.should_prompt_unsuccessful_message_when_input_book_already_checked_out" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibraryTest_should_return_book_renter_name_when_input_book_name - 2018.04.28 at 18h 39m 26s.xml">
-      <configuration name="LibraryTest.should_return_book_renter_name_when_input_book_name" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_should_show_returned_book_in_list_when_returned - 2018.04.28 at 19h 01m 59s.xml">
+      <configuration name="BibliotecaAppTest.should_show_returned_book_in_list_when_returned" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibraryTest_should_return_book_renter_name_when_input_book_name - 2018.04.28 at 18h 40m 30s.xml">
-      <configuration name="LibraryTest.should_return_book_renter_name_when_input_book_name" configurationId="JUnit" />
+    <history-entry file="BibliotecaAppTest_should_show_returned_book_in_list_when_returned - 2018.04.28 at 19h 02m 10s.xml">
+      <configuration name="BibliotecaAppTest.should_show_returned_book_in_list_when_returned" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58397000" />
+    <option name="totallyTimeSpent" value="58780000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="238" y="306" width="1529" height="880" extended-state="0" />
+    <frame x="154" y="172" width="1529" height="880" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1023,7 +1028,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test:add test &quot;should_prompt_unsuccessful_message_when_input_book_already_checked_out&quot;" />
     <MESSAGE value="test:add test &quot;should_print_unsuccessful_return_message_when_book_name_right_but_not_rent_from_this_library&quot;" />
     <MESSAGE value="refactor:refactor OptionStatus and tests" />
     <MESSAGE value="refactor:remove unused code" />
@@ -1048,7 +1052,8 @@
     <MESSAGE value="test:add test &quot;should_print_user_account_menu_when_choose_user_account_option&quot;" />
     <MESSAGE value="test:add test &quot;should_return_book_renter_name_when_input_book_name&quot;" />
     <MESSAGE value="test:add test &quot;should_not_check_out_book_when_not_login&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="test:add test &quot;should_not_check_out_book_when_not_login&quot;" />
+    <MESSAGE value="feat:implement test &quot;should_not_check_out_book_when_not_login&quot; and refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:implement test &quot;should_not_check_out_book_when_not_login&quot; and refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1412,18 +1417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1049">
-          <caret line="112" column="94" lean-forward="false" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8862#8863#0" expanded="true" />
-            <element signature="e#8909#8910#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1451,10 +1444,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/controller/BibliotecaControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="21" column="58" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="21" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8862#8863#0" expanded="true" />
+            <element signature="e#8909#8910#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="251" column="29" lean-forward="true" selection-start-line="251" selection-start-column="29" selection-end-line="251" selection-end-column="29" />
+        <state relative-caret-position="253">
+          <caret line="109" column="74" lean-forward="false" selection-start-line="109" selection-start-column="74" selection-end-line="109" selection-end-column="74" />
           <folding />
         </state>
       </provider>
