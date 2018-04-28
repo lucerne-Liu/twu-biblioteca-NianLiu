@@ -9,6 +9,7 @@ import java.io.PrintStream;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
+import static org.junit.Assert.*;
 
 public class BibliotecaControllerTest {
     private static final String EXIST_BOOK_NAME = "Head First Java";
@@ -17,8 +18,10 @@ public class BibliotecaControllerTest {
     private static final String EXIST_MOVIE_NAME = "Avengers: Infinity War";
     private static final String EXIST_MOVIE_NAME_WITH_NO_SPACES = "Avengers:InfinityWar";
     private static final String ABSENT_MOVIE_NAME = "A Quiet Place";
-    public static final String EXIST_USER_NUMBER = "111-1111";
-    public static final String EXIST_USER_PWD = "123456";
+    private static final String EXIST_USER_NUMBER = "111-1111";
+    private static final String EXIST_USER_PWD = "123456";
+    private static final String EXIST_USER_NAME = "Kate";
+    public static final String NOT_EXIST_PWD = "58555";
     private BibliotecaController bibliotecaController;
     private ByteArrayOutputStream outputContent;
     private InputReader reader;
@@ -131,7 +134,8 @@ public class BibliotecaControllerTest {
         bibliotecaController.logIn();
         assertThat(systemOut().startsWith("Please enter your library number(xxx-xxxx):\n")).isTrue();
         assertThat(systemOut().contains("Please enter your password:\n")).isTrue();
-        assertThat(systemOut().endsWith("Login Successful! Now you can check-out and return books.\n")).isTrue();
+        assertThat(systemOut().endsWith("Login Successful!\n"
+                +"Welcome " + EXIST_USER_NAME + "! Now you can check-out and return books.\n")).isTrue();
     }
 
     @Test
@@ -140,7 +144,18 @@ public class BibliotecaControllerTest {
         bibliotecaController.logIn();
         assertThat(systemOut().contains("The library number format is wrong!\n"
                 + "Please enter your library number(xxx-xxxx):\n")).isTrue();
-        assertThat(systemOut().endsWith("Login Successful! Now you can check-out and return books.\n")).isTrue();
+        assertThat(systemOut().endsWith("Login Successful!\n"
+                +"Welcome " + EXIST_USER_NAME + "! Now you can check-out and return books.\n")).isTrue();
+        verify(reader,times(3)).readString();
+    }
+
+    @Test
+    public void should_prompt_message_when_user_account_not_exist() {
+        when(reader.readString()).thenReturn(EXIST_USER_NUMBER).thenReturn(NOT_EXIST_PWD);
+        bibliotecaController.logIn();
+        assertThat(systemOut().startsWith("Please enter your library number(xxx-xxxx):\n")).isTrue();
+        assertThat(systemOut().endsWith("Login failed! Please check your library number and password.\n")).isTrue();
+        verify(reader,times(2)).readString();
     }
 
     private String systemOut() {

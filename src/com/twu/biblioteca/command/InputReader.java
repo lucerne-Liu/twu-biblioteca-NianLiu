@@ -18,8 +18,6 @@ public class InputReader {
     }
 
     public String readString() {
-        scanner.useDelimiter("\n");
-        String inputString = scanner.next().trim();
-        return inputString;
+        return scanner.useDelimiter("\n").next().trim();
     }
 }

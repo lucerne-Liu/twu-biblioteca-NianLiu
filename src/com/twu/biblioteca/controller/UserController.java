@@ -6,6 +6,7 @@ import com.twu.biblioteca.validator.LoginValidator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class UserController {
     public static List<User> userList = new ArrayList<User>() {
@@ -15,7 +16,7 @@ public class UserController {
             add(new User("111-3333", "qqq", "Tiffany", "333@foxmail.com", "156989899"));
         }
     };
-    private boolean isLogined;
+    private boolean isLogin;
     private String loginUserNumber;
     private InputReader reader;
     private LoginValidator validator = new LoginValidator();
@@ -24,22 +25,26 @@ public class UserController {
         this.reader = reader;
     }
 
-    public boolean isLogined() {
-        return isLogined;
+    public boolean checkLoginStatus() {
+        return isLogin;
     }
 
-    private void setLogined(boolean logined) {
-        isLogined = logined;
+    private void setLoginStatus(boolean login) {
+        isLogin = login;
     }
 
     private void setLoginUserNumber(String loginUserNumber) {
         this.loginUserNumber = loginUserNumber;
     }
 
-    public void logIn() {
+    public String findUserNameByLibraryNumber(String libraryNumber) {
+        return userList.stream().filter(user -> user.getLibraryNumber().equals(libraryNumber)).map(User::getName).collect(Collectors.joining());
+    }
+
+    public String logIn() {
         String libraryNumber;
         while (true) {
-            System.out.println("Please enter your library number(xxx-xxxx):\n");
+            System.out.print("Please enter your library number(xxx-xxxx):\n");
             libraryNumber = reader.readString();
             if (validator.validateLibraryNumber(libraryNumber)) {
                 break;
@@ -47,9 +52,15 @@ public class UserController {
                 System.out.print("The library number format is wrong!\n");
             }
         }
-        System.out.println("Please enter your password:\n");
-        validator.validateUser(libraryNumber, reader.readString());
-        System.out.print("Login Successful! Now you can check-out and return books.\n");
+        System.out.print("Please enter your password:\n");
+        if (validator.validateUser(libraryNumber, reader.readString())) {
+            setLoginStatus(true);
+            setLoginUserNumber(libraryNumber);
+            return findUserNameByLibraryNumber(libraryNumber);
+        } else {
+            return "false";
+        }
+
 
 
     }

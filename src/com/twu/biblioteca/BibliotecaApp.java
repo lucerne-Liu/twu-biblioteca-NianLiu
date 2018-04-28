@@ -33,6 +33,7 @@ public class BibliotecaApp {
         printMainMenu();
         switch (reader.readOption()) {
             case OptionStatus.Log_In:
+                bibliotecaController.logIn();
                 return true;
             case OptionStatus.List_Books:
                 bibliotecaController.printBooksList();

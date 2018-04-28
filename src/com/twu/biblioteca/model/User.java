@@ -15,12 +15,16 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    private String getLibraryNumber() {
+    public String getLibraryNumber() {
         return libraryNumber;
     }
 
     private String getPassword() {
         return password;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override

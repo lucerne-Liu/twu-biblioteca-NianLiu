@@ -25,7 +25,7 @@ public class BibliotecaController {
             if (library.checkOutMedia(reader.readString())) {
                 System.out.println("Thank you! Enjoy the book");
                 break;
-            }else{
+            } else {
                 System.out.print("That book is not available.\n");
             }
         }
@@ -44,13 +44,19 @@ public class BibliotecaController {
         System.out.println("Please input the movie name you want to check out:");
         if (videoStore.checkOutMedia(reader.readString())) {
             System.out.print("Thank you! Enjoy the Movie.\n");
-        }else{
+        } else {
             System.out.print("That Movie is not available.\n");
         }
     }
 
     public void logIn() {
-        userController.logIn();
+        String loginMsg = userController.logIn();
+        if (loginMsg.equals("false")) {
+            System.out.print("Login failed! Please check your library number and password.\n");
+        } else {
+            System.out.print("Login Successful!\n");
+            System.out.print(String.format("Welcome %s! Now you can check-out and return books.\n", loginMsg));
+        }
     }
 
 }
